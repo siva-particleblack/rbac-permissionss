@@ -42,6 +42,7 @@ export declare class PermissionsComponent implements OnInit {
     RBACORG: RBACINFO;
     orgSubs: Subscription;
     orgId: any;
+    position: string;
     showLinkPage: boolean;
     environment: any;
     constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, httpService: HttpService, _shareData: ShareDataService, _storeservice: DataStoreService);
