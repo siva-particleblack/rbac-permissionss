@@ -7,26 +7,21 @@ import { DomSanitizer } from '@angular/platform-browser';
 import * as i4 from 'primeng/api';
 import { PrimeIcons, ConfirmationService } from 'primeng/api';
 import { map } from 'rxjs/operators';
-import * as i1 from '@angular/common/http';
-import { HttpHeaders, HttpClientModule, HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import { throwError } from 'rxjs/internal/observable/throwError';
-import * as i1$1 from '@angular/router';
+import * as i1 from '@angular/router';
 import { NavigationStart } from '@angular/router';
+import 'rxjs/add/operator/map';
 import * as i2 from '@angular/common';
 import { CommonModule } from '@angular/common';
-import * as i9 from 'primeng/tree';
-import * as i10 from 'primeng/contextmenu';
+import * as i8 from 'primeng/tree';
+import * as i9 from 'primeng/contextmenu';
 import { ContextMenuModule } from 'primeng/contextmenu';
-import * as i11 from 'primeng/confirmpopup';
-import { ConfirmPopupModule } from 'primeng/confirmpopup';
-import * as i12 from 'primeng/card';
+import * as i10 from 'primeng/card';
 import { CardModule } from 'primeng/card';
-import * as i13 from 'primeng/dropdown';
+import * as i11 from 'primeng/dropdown';
 import { DropdownModule } from 'primeng/dropdown';
-import * as i14 from 'primeng/checkbox';
+import * as i12 from 'primeng/checkbox';
 import { CheckboxModule } from 'primeng/checkbox';
-import * as i17 from 'primeng/inputtext';
+import * as i13 from 'primeng/inputtext';
 import { InputTextModule } from 'primeng/inputtext';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionModule } from 'primeng/accordion';
@@ -35,6 +30,7 @@ import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { DialogModule } from 'primeng/dialog';
 import { EditorModule } from 'primeng/editor';
 import { FieldsetModule } from 'primeng/fieldset';
@@ -58,6 +54,8 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { TreeSelectModule } from 'primeng/treeselect';
+import * as i1$1 from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { __awaiter } from 'tslib';
 
 class RbacPermissionsService {
@@ -242,112 +240,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
             type: Injectable
         }], ctorParameters: function () { return []; } });
 
-class HttpService {
-    constructor(http, _storeservice) {
-        this.http = http;
+class RbacService {
+    constructor(_storeservice) {
         this._storeservice = _storeservice;
-        this.overrideUrl = true;
-        this.baseUrl = '';
-        this.headers = new HttpHeaders()
-            .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
-            .set('role', 'role=CP_PUBLIC');
-        this.showSpinner = new BehaviorSubject(false);
-        this.outsideShowSpinner = new BehaviorSubject(false);
         this._storeservice.currentStore.subscribe((res) => {
-            if (res['RBACORG'] && res['RBACORG'] !== '') {
-                this.RBACORG = res['RBACORG'];
-                this.url = this.RBACORG['apiHost'] ? this.RBACORG['apiHost'] : 'http://localhost:3000/api';
-                this.tokenKey = this.RBACORG['tokenKey'];
+            if (res) {
+                this.httpService = res['HTTPSERVICE'];
             }
         });
-        this.url1 = '';
     }
-    get(apiRoute) {
-        return this.http.get(`${this.url + apiRoute}`, {
-            headers: this.getHttpNewHeaders()
-        });
-    }
-    post(apiRoute, body) {
-        return this.http.post(`${this.url + apiRoute}`, body, {
-            headers: this.getHttpNewHeaders()
-        });
-    }
-    put(apiRoute, body) {
-        return this.http.put(`${this.url + apiRoute}`, body, {
-            headers: this.getHttpNewHeaders()
-        });
-    }
-    patch(apiRoute, body) {
-        return this.http.patch(`${this.url + apiRoute}`, body, {
-            headers: this.getHttpNewHeaders()
-        });
-    }
-    delete(apiRoute) {
-        return this.http.delete(`${this.url + apiRoute}`, {
-            headers: this.getHttpNewHeaders()
-        });
-    }
-    getHttpHeaders() {
-        return new HttpHeaders().set('key', 'value');
-    }
-    getHttpNewHeaders() {
-        return this.headers.set('Authorization', `Bearer ${this.getToken()}`);
-    }
-    getAttachmentHttpHeaders(contentType) {
-        return new HttpHeaders().set('Content-Type', contentType).set('x-ms-blob-type', 'BlockBlob');
-    }
-    putUpload(apiRoute, body, contentType) {
-        return this.http.put(`${this.url1 + apiRoute}`, body, { headers: this.getAttachmentHttpHeaders(contentType) });
-    }
-    putupload2(apiRoute, body, contenttype) {
-        return this.http
-            .put(`${this.url1 + apiRoute}`, body, {
-            headers: this.getAttachmentHttpHeaders(contenttype),
-            observe: 'response'
-        })
-            .pipe(map(data => {
-            return data;
-        }));
-    }
-    /**
-     *
-     * @param apiRoute
-     * This function will download the stream file from the API service.
-     * No HTTP required for this stream. So used Window.location.href to download the file
-     */
-    getFormDownloaded(apiRoute) {
-        window.location.href = `${this.url + apiRoute}`;
-    }
-    //common http service(optional)
-    handleError(error) {
-        var _a, _b;
-        let errorMessage = '';
-        if (error.error instanceof ErrorEvent) {
-            // Client-side errors
-            errorMessage = `Error: ${error.error.message}`;
-        }
-        else {
-            // Server-side errors
-            errorMessage = `Error Code: ${error.status}\nMessage: ${((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message) ? (_b = error === null || error === void 0 ? void 0 : error.error) === null || _b === void 0 ? void 0 : _b.message : error.message}`;
-        }
-        return throwError(errorMessage);
-    }
-    getToken() {
-        const token = this.tokenKey ? this.tokenKey : 'jwt-token';
-        return sessionStorage.getItem(token);
-    }
-}
-HttpService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService, deps: [{ token: i1.HttpClient }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
-HttpService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: HttpService, decorators: [{
-            type: Injectable
-        }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: DataStoreService }]; } });
-
-class RbacService {
-    constructor(httpService) {
-        this.httpService = httpService;
-    }
+    // constructor(private httpService: HttpService) {}
     getAllUserList(key) {
         return this.httpService.get(`${UserConfig.EndPoint.User.getAllUserList}/${key}`);
     }
@@ -476,14 +378,14 @@ class RbacService {
         return this.httpService.get(AccessManagementConfig$1.EndPoint.Organization.getOrganization.replace('{orgId}', orgId));
     }
 }
-RbacService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacService, deps: [{ token: HttpService }], target: i0.ɵɵFactoryTarget.Injectable });
+RbacService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacService, deps: [{ token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
 RbacService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: HttpService }]; } });
+        }], ctorParameters: function () { return [{ type: DataStoreService }]; } });
 
 class AlertService {
     constructor(router) {
@@ -528,11 +430,11 @@ class AlertService {
         this.subject.next({});
     }
 }
-AlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, deps: [{ token: i1$1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
+AlertService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, deps: [{ token: i1.Router }], target: i0.ɵɵFactoryTarget.Injectable });
 AlertService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: AlertService, decorators: [{
             type: Injectable
-        }], ctorParameters: function () { return [{ type: i1$1.Router }]; } });
+        }], ctorParameters: function () { return [{ type: i1.Router }]; } });
 var AlertType;
 (function (AlertType) {
     AlertType[AlertType["Success"] = 0] = "Success";
@@ -694,18 +596,21 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
             }] } });
 
 class PermissionsComponent {
-    constructor(injector, permissionService, formBuilder, alertService, confirmationService, httpService, _shareData, _storeservice) {
+    constructor(injector, permissionService, formBuilder, alertService, confirmationService, 
+    // private httpService: HttpService,
+    _shareData, _storeservice) {
         this.permissionService = permissionService;
         this.formBuilder = formBuilder;
         this.alertService = alertService;
         this.confirmationService = confirmationService;
-        this.httpService = httpService;
         this._shareData = _shareData;
         this._storeservice = _storeservice;
         this.menuItems = [];
+        this.filteredPermissionList = [];
         this.selectedItem = {};
         this.RBACORG = new RBACINFO();
         this.position = 'top';
+        this.duplicatepages = [];
         this.nodeType = 'page';
         this.saveMode = 'INSERT';
         this.sanitizer = injector.get(DomSanitizer);
@@ -719,6 +624,7 @@ class PermissionsComponent {
                 console.log(this.RBACORG, 'RBACORG Permisson');
                 this.environment = this.RBACORG['environment'];
                 this.orgId = parseInt(this.RBACORG['orgID']);
+                this.httpService = res['HTTPSERVICE'];
                 if (this.orgId) {
                     this.setPagesList();
                 }
@@ -947,21 +853,27 @@ class PermissionsComponent {
                 command: event => {
                     this.saveMode = 'DELETE';
                     this.nodeType = this.selectedItem.type;
-                    this.confirmationService.confirm({
-                        target: event.target,
-                        message: 'Are you sure that you want to delete?',
-                        icon: 'pi pi-exclamation-triangle',
-                        accept: () => {
-                            //confirm action
-                            this.deleteItem();
-                        },
-                        reject: () => {
-                            // This is intentional
-                        },
-                    });
+                    event.stopPropagation();
+                    $('#Deleteuser').modal('show');
+                    // this.confirmationService.confirm({
+                    //   target: event.target as EventTarget,
+                    //   message: 'Are you sure that you want to delete?',
+                    //   icon: 'pi pi-exclamation-triangle',
+                    //   accept: () => {
+                    //     //confirm action
+                    //     this.deleteItem();
+                    //   },
+                    //   reject: () => {
+                    //     // This is intentional
+                    //   },
+                    // });
                 }
             }
         ];
+    }
+    deletePermission() {
+        $('#Deleteuser').modal('hide');
+        this.deleteItem();
     }
     setPagesList() {
         this.permissionService.getOrganizationPage(this.orgId).subscribe((res) => {
@@ -981,6 +893,7 @@ class PermissionsComponent {
     loadTree() {
         this.permissionService.getAllPageTree(this.environment.applicationid).subscribe((items) => {
             this.pages = items;
+            this.duplicatepages = items;
             if (this.pages.length) {
                 this.selectedItem = this.pages[0];
             }
@@ -1070,9 +983,13 @@ class PermissionsComponent {
             return false;
         }
     }
+    searchPermissionList(event) {
+        const value = event.target.value.toLowerCase();
+        this.pages = this.duplicatepages.filter((a) => { var _a; return (_a = a === null || a === void 0 ? void 0 : a.name) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+    }
 }
-PermissionsComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: PermissionsComponent, deps: [{ token: i0.Injector }, { token: RbacService }, { token: i2$1.FormBuilder }, { token: AlertService }, { token: i4.ConfirmationService }, { token: HttpService }, { token: ShareDataService }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Component });
-PermissionsComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0, template: "<app-alert></app-alert>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"masteracess\">\r\n            <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n            <p-confirmPopup styleClass=\"delete-popup\"></p-confirmPopup>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Page</span>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" pattern=\"[a-zA-Z0-9]+(\\s[a-zA-Z0-9]+)*\" pInputText />\r\n\r\n            <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n              !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['name'].invalid &&\r\n            pageForm.controls['name'].hasError('required') &&\r\n          (pageForm.controls['name'].dirty || pageForm.controls['name'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['name'].hasError('required')\" class=\"p-error block\">Name is\r\n                required</small>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Route\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"croute\" type=\"text\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Enter Route\" aria-describedby=\"croute\" pattern=\"[a-zA-Z0-9\\/\\\\-]*\" pInputText />\r\n              <div *ngIf=\"\r\n              pageForm.controls['route'].invalid &&\r\n                pageForm.controls['route'].dirty &&\r\n              !pageForm.controls['route'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['route'].errors && pageForm.controls['route'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['route'].invalid &&\r\n            pageForm.controls['route'].hasError('required') &&\r\n          (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['route'].hasError('required')\" class=\"p-error block\">Route is\r\n                required</small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Route is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n          <label for=\"icon\" class=\"referral-form-labels\">\r\n            Icon\r\n            <span class=\"requiredfield text-danger\">*</span>\r\n          </label>\r\n          <div class=\"d-flex\">\r\n            <input id=\"icon\" type=\"text\" formControlName=\"icon\" placeholder=\"Enter Icon Name\"\r\n              aria-describedby=\"cdescription-icon\" pInputText />\r\n            <span class=\"material-symbols-outlined userempty\">\r\n              {{ pageForm.controls['icon'].value }}\r\n            </span>\r\n          </div>\r\n          <div *ngIf=\"\r\n            pageForm.controls['icon'].invalid &&\r\n            (pageForm.controls['icon'].dirty || pageForm.controls['icon'].touched)\r\n          \">\r\n            <small *ngIf=\"pageForm.controls['icon'].invalid\" class=\"p-error block\">Icon is required </small>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Page' : 'Add Page' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block\">Permission Type\r\n                is required\r\n              </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block\">Key is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block\">Description is\r\n                required\r\n              </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}.center-popup{top:40%!important;left:50%!important}.p-confirm-popup{top:40%!important;left:50%!important}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i9.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i10.ContextMenu, selector: "p-contextMenu", inputs: ["model", "global", "target", "style", "styleClass", "appendTo", "autoZIndex", "baseZIndex", "triggerEvent"], outputs: ["onShow", "onHide"] }, { type: i11.ConfirmPopup, selector: "p-confirmPopup", inputs: ["key", "defaultFocus", "showTransitionOptions", "hideTransitionOptions", "autoZIndex", "baseZIndex", "style", "styleClass", "visible"] }, { type: i12.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i13.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }, { type: i14.Checkbox, selector: "p-checkbox", inputs: ["value", "name", "disabled", "binary", "label", "ariaLabelledBy", "ariaLabel", "tabindex", "inputId", "style", "styleClass", "labelStyleClass", "formControl", "checkboxIcon", "readonly", "required", "trueValue", "falseValue"], outputs: ["onChange"] }], directives: [{ type: i2.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i2$1.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2$1.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i2$1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2$1.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i2$1.PatternValidator, selector: "[pattern][formControlName],[pattern][formControl],[pattern][ngModel]", inputs: ["pattern"] }, { type: i17.InputText, selector: "[pInputText]" }] });
+PermissionsComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: PermissionsComponent, deps: [{ token: i0.Injector }, { token: RbacService }, { token: i2$1.FormBuilder }, { token: AlertService }, { token: i4.ConfirmationService }, { token: ShareDataService }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Component });
+PermissionsComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0, template: "<app-alert></app-alert>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"form-group bgiconsearch\">\r\n            <input\r\n              class=\"form-control\"\r\n              placeholder=\"Search by Page Name\"\r\n              type=\"text\"\r\n              (keyup)=\"searchPermissionList($event)\" \r\n              pInputText />\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"masteracess\">\r\n            <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n            <!-- <p-confirmPopup styleClass=\"delete-popup\"></p-confirmPopup> -->\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Page</span>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" pattern=\"[a-zA-Z0-9]+(\\s[a-zA-Z0-9]+)*\" pInputText />\r\n\r\n            <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n              !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['name'].invalid &&\r\n            pageForm.controls['name'].hasError('required') &&\r\n          (pageForm.controls['name'].dirty || pageForm.controls['name'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['name'].hasError('required')\" class=\"p-error block\">Name is\r\n                required</small>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Route\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"croute\" type=\"text\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Enter Route\" aria-describedby=\"croute\" pattern=\"[a-zA-Z0-9\\/\\\\-]*\" pInputText />\r\n              <div *ngIf=\"\r\n              pageForm.controls['route'].invalid &&\r\n                pageForm.controls['route'].dirty &&\r\n              !pageForm.controls['route'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['route'].errors && pageForm.controls['route'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['route'].invalid &&\r\n            pageForm.controls['route'].hasError('required') &&\r\n          (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['route'].hasError('required')\" class=\"p-error block\">Route is\r\n                required</small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Route is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n          <label for=\"icon\" class=\"referral-form-labels\">\r\n            Icon\r\n            <span class=\"requiredfield text-danger\">*</span>\r\n          </label>\r\n          <div class=\"d-flex\">\r\n            <input id=\"icon\" type=\"text\" formControlName=\"icon\" placeholder=\"Enter Icon Name\"\r\n              aria-describedby=\"cdescription-icon\" pInputText />\r\n            <span class=\"material-symbols-outlined userempty\">\r\n              {{ pageForm.controls['icon'].value }}\r\n            </span>\r\n          </div>\r\n          <div *ngIf=\"\r\n            pageForm.controls['icon'].invalid &&\r\n            (pageForm.controls['icon'].dirty || pageForm.controls['icon'].touched)\r\n          \">\r\n            <small *ngIf=\"pageForm.controls['icon'].invalid\" class=\"p-error block\">Icon is required </small>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Page' : 'Add Page' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block\">Permission Type\r\n                is required\r\n              </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block\">Key is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block\">Description is\r\n                required\r\n              </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"modal\" id=\"Deleteuser\" tabindex=\"-1\" role=\"dialog\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Delete Permission</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        Are you sure you want to delete the Permission?\r\n        <div class=\"clearfix\"></div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\"\r\n            (click)=\"deletePermission()\">\r\n            Delete\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" data-dismiss=\"modal\">\r\n            Cancel\r\n          </button>\r\n        </div>\r\n        <div class=\"clearfix\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i8.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i9.ContextMenu, selector: "p-contextMenu", inputs: ["model", "global", "target", "style", "styleClass", "appendTo", "autoZIndex", "baseZIndex", "triggerEvent"], outputs: ["onShow", "onHide"] }, { type: i10.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i11.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }, { type: i12.Checkbox, selector: "p-checkbox", inputs: ["value", "name", "disabled", "binary", "label", "ariaLabelledBy", "ariaLabel", "tabindex", "inputId", "style", "styleClass", "labelStyleClass", "formControl", "checkboxIcon", "readonly", "required", "trueValue", "falseValue"], outputs: ["onChange"] }], directives: [{ type: i13.InputText, selector: "[pInputText]" }, { type: i2.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i2$1.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2$1.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i2$1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2$1.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i2$1.PatternValidator, selector: "[pattern][formControlName],[pattern][formControl],[pattern][ngModel]", inputs: ["pattern"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: PermissionsComponent, decorators: [{
             type: Component,
             args: [{
@@ -1080,7 +997,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                     templateUrl: './permissions.component.html',
                     styleUrls: ['./permissions.component.scss']
                 }]
-        }], ctorParameters: function () { return [{ type: i0.Injector }, { type: RbacService }, { type: i2$1.FormBuilder }, { type: AlertService }, { type: i4.ConfirmationService }, { type: HttpService }, { type: ShareDataService }, { type: DataStoreService }]; } });
+        }], ctorParameters: function () { return [{ type: i0.Injector }, { type: RbacService }, { type: i2$1.FormBuilder }, { type: AlertService }, { type: i4.ConfirmationService }, { type: ShareDataService }, { type: DataStoreService }]; } });
 
 class RbacPermissionsComponent {
     constructor(permissionStore, _storeservice) {
@@ -1094,11 +1011,12 @@ class RbacPermissionsComponent {
             this.PERMISSION = val.PERMISSION;
             this._storeservice.setData('RBACORG', this.RBACORG);
             this.permissionStore.setStore(this.PERMISSION);
+            this._storeservice.setData('HTTPSERVICE', val.httpService);
         });
     }
 }
 RbacPermissionsComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsComponent, deps: [{ token: PermissionStore }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Component });
-RbacPermissionsComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent" }, ngImport: i0, template: `
+RbacPermissionsComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent", COMMONSERVICE: "COMMONSERVICE" }, ngImport: i0, template: `
       <permissions></permissions>
   `, isInline: true, components: [{ type: PermissionsComponent, selector: "permissions" }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsComponent, decorators: [{
@@ -1115,6 +1033,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
             }], PERMISSION: [{
                 type: Input
             }], permissionEvent: [{
+                type: Input
+            }], COMMONSERVICE: [{
                 type: Input
             }] } });
 
@@ -1199,7 +1119,7 @@ PicsRbacPermissionsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         TabMenuModule,
         TabViewModule,
         TreeSelectModule,
-        HttpClientModule,
+        // HttpClientModule,
         CheckboxModule,
         DropdownModule,
         CardModule,
@@ -1242,7 +1162,7 @@ PicsRbacPermissionsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0
             TabMenuModule,
             TabViewModule,
             TreeSelectModule,
-            HttpClientModule,
+            // HttpClientModule,
             CheckboxModule,
             DropdownModule,
             CardModule,
@@ -1292,7 +1212,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                         TabMenuModule,
                         TabViewModule,
                         TreeSelectModule,
-                        HttpClientModule,
+                        // HttpClientModule,
                         CheckboxModule,
                         DropdownModule,
                         CardModule,
@@ -1421,20 +1341,20 @@ class MicrostrategyService {
         });
     }
 }
-MicrostrategyService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: MicrostrategyService, deps: [{ token: i1.HttpClient }, { token: AlertService }, { token: PermissionStore }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
+MicrostrategyService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: MicrostrategyService, deps: [{ token: i1$1.HttpClient }, { token: AlertService }, { token: PermissionStore }, { token: DataStoreService }], target: i0.ɵɵFactoryTarget.Injectable });
 MicrostrategyService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: MicrostrategyService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: MicrostrategyService, decorators: [{
             type: Injectable,
             args: [{
                     providedIn: 'root'
                 }]
-        }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: AlertService }, { type: PermissionStore }, { type: DataStoreService }]; } });
+        }], ctorParameters: function () { return [{ type: i1$1.HttpClient }, { type: AlertService }, { type: PermissionStore }, { type: DataStoreService }]; } });
 
 class RbacPermissionsModule {
 }
 RbacPermissionsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 RbacPermissionsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsModule, declarations: [RbacPermissionsComponent], imports: [PicsRbacPermissionsModule], exports: [RbacPermissionsComponent] });
-RbacPermissionsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsModule, providers: [RbacService, MicrostrategyService, HttpClient, HttpService, AlertService, ConfirmationService, PermissionStore, DataStoreService], imports: [[
+RbacPermissionsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsModule, providers: [RbacService, MicrostrategyService, HttpClient, AlertService, ConfirmationService, PermissionStore, DataStoreService], imports: [[
             PicsRbacPermissionsModule
         ]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: RbacPermissionsModule, decorators: [{
@@ -1449,7 +1369,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                     exports: [
                         RbacPermissionsComponent
                     ],
-                    providers: [RbacService, MicrostrategyService, HttpClient, HttpService, AlertService, ConfirmationService, PermissionStore, DataStoreService]
+                    providers: [RbacService, MicrostrategyService, HttpClient, AlertService, ConfirmationService, PermissionStore, DataStoreService]
                 }]
         }] });
 

@@ -3,7 +3,6 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ConfirmationService, MenuItem, TreeNode } from 'primeng/api';
 import { AlertService } from '../@core/service/alert.service';
-import { HttpService } from '../@core/service/http.service';
 import { RbacService } from '../@core/service/rbac.service';
 import { ShareDataService } from '../@core/service/share-data.service';
 import { RBACINFO } from '../@core/urls/rbac-url.config';
@@ -15,11 +14,11 @@ export declare class PermissionsComponent implements OnInit {
     private formBuilder;
     private alertService;
     private confirmationService;
-    private httpService;
     private _shareData;
     private _storeservice;
     pages: TreeNode[];
     menuItems: MenuItem[];
+    filteredPermissionList: any[];
     pageForm: FormGroup;
     permissionForm: FormGroup;
     permissions: any[];
@@ -45,7 +44,9 @@ export declare class PermissionsComponent implements OnInit {
     position: string;
     showLinkPage: boolean;
     environment: any;
-    constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, httpService: HttpService, _shareData: ShareDataService, _storeservice: DataStoreService);
+    duplicatepages: any[];
+    httpService: any;
+    constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, _shareData: ShareDataService, _storeservice: DataStoreService);
     ngOnInit(): void;
     ngOnDestroy(): void;
     loadInitial(): void;
@@ -61,12 +62,14 @@ export declare class PermissionsComponent implements OnInit {
     removeThumbnail(): void;
     createPermissionForm(): void;
     private loadContextMenu;
+    deletePermission(): void;
     setPagesList(): void;
     private loadTree;
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
     handleFileInput(fileValue: any): void;
     validateImage(file: any): boolean;
+    searchPermissionList(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PermissionsComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PermissionsComponent, "permissions", never, {}, {}, never, never>;
 }

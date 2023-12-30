@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/platform-browser'), require('primeng/api'), require('rxjs/operators'), require('@angular/common/http'), require('rxjs/add/operator/map'), require('rxjs/internal/observable/throwError'), require('@angular/router'), require('@angular/common'), require('primeng/tree'), require('primeng/contextmenu'), require('primeng/confirmpopup'), require('primeng/card'), require('primeng/dropdown'), require('primeng/checkbox'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/confirmdialog'), require('primeng/dialog'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect')) :
-    typeof define === 'function' && define.amd ? define('@pics-core/rbac-permissions', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/platform-browser', 'primeng/api', 'rxjs/operators', '@angular/common/http', 'rxjs/add/operator/map', 'rxjs/internal/observable/throwError', '@angular/router', '@angular/common', 'primeng/tree', 'primeng/contextmenu', 'primeng/confirmpopup', 'primeng/card', 'primeng/dropdown', 'primeng/checkbox', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/confirmdialog', 'primeng/dialog', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"]["rbac-permissions"] = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.platformBrowser, global.i4, global.rxjs.operators, global.ng.common.http, global.rxjs["add/operator/map"], global.rxjs["internal/observable/throwError"], global.ng.router, global.ng.common, global.i9, global.i10, global.i11, global.i12, global.i13, global.i14, global.i17, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.confirmdialog, global.dialog, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect));
-})(this, (function (exports, i0, rxjs, i2$1, platformBrowser, i4, operators, i1, map, throwError, i1$1, i2, i9, i10, i11, i12, i13, i14, i17, ngBootstrap, accordion, avatar, badge, button, calendar, confirmdialog, dialog, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/platform-browser'), require('primeng/api'), require('rxjs/operators'), require('@angular/router'), require('rxjs/add/operator/map'), require('@angular/common'), require('primeng/tree'), require('primeng/contextmenu'), require('primeng/card'), require('primeng/dropdown'), require('primeng/checkbox'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/dialog'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
+    typeof define === 'function' && define.amd ? define('@pics-core/rbac-permissions', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/platform-browser', 'primeng/api', 'rxjs/operators', '@angular/router', 'rxjs/add/operator/map', '@angular/common', 'primeng/tree', 'primeng/contextmenu', 'primeng/card', 'primeng/dropdown', 'primeng/checkbox', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/dialog', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"]["rbac-permissions"] = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.platformBrowser, global.i4, global.rxjs.operators, global.ng.router, global.rxjs["add/operator/map"], global.ng.common, global.i8, global.i9, global.i10, global.i11, global.i12, global.i13, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.confirmdialog, global.confirmpopup, global.dialog, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
+})(this, (function (exports, i0, rxjs, i2$1, platformBrowser, i4, operators, i1, map, i2, i8, i9, i10, i11, i12, i13, ngBootstrap, accordion, avatar, badge, button, calendar, confirmdialog, confirmpopup, dialog, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, i1$1) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -26,15 +26,14 @@
     var i2__namespace$1 = /*#__PURE__*/_interopNamespace(i2$1);
     var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
     var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
-    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
     var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
+    var i8__namespace = /*#__PURE__*/_interopNamespace(i8);
     var i9__namespace = /*#__PURE__*/_interopNamespace(i9);
     var i10__namespace = /*#__PURE__*/_interopNamespace(i10);
     var i11__namespace = /*#__PURE__*/_interopNamespace(i11);
     var i12__namespace = /*#__PURE__*/_interopNamespace(i12);
     var i13__namespace = /*#__PURE__*/_interopNamespace(i13);
-    var i14__namespace = /*#__PURE__*/_interopNamespace(i14);
-    var i17__namespace = /*#__PURE__*/_interopNamespace(i17);
+    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
 
     var RbacPermissionsService = /** @class */ (function () {
         function RbacPermissionsService() {
@@ -716,114 +715,17 @@
                 type: i0.Injectable
             }], ctorParameters: function () { return []; } });
 
-    var HttpService = /** @class */ (function () {
-        function HttpService(http, _storeservice) {
+    var RbacService = /** @class */ (function () {
+        function RbacService(_storeservice) {
             var _this = this;
-            this.http = http;
             this._storeservice = _storeservice;
-            this.overrideUrl = true;
-            this.baseUrl = '';
-            this.headers = new i1.HttpHeaders()
-                .set('Accept', 'application/json')
-                .set('Content-Type', 'application/json')
-                .set('role', 'role=CP_PUBLIC');
-            this.showSpinner = new rxjs.BehaviorSubject(false);
-            this.outsideShowSpinner = new rxjs.BehaviorSubject(false);
             this._storeservice.currentStore.subscribe(function (res) {
-                if (res['RBACORG'] && res['RBACORG'] !== '') {
-                    _this.RBACORG = res['RBACORG'];
-                    _this.url = _this.RBACORG['apiHost'] ? _this.RBACORG['apiHost'] : 'http://localhost:3000/api';
-                    _this.tokenKey = _this.RBACORG['tokenKey'];
+                if (res) {
+                    _this.httpService = res['HTTPSERVICE'];
                 }
             });
-            this.url1 = '';
         }
-        HttpService.prototype.get = function (apiRoute) {
-            return this.http.get("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.post = function (apiRoute, body) {
-            return this.http.post("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.put = function (apiRoute, body) {
-            return this.http.put("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.patch = function (apiRoute, body) {
-            return this.http.patch("" + (this.url + apiRoute), body, {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.delete = function (apiRoute) {
-            return this.http.delete("" + (this.url + apiRoute), {
-                headers: this.getHttpNewHeaders()
-            });
-        };
-        HttpService.prototype.getHttpHeaders = function () {
-            return new i1.HttpHeaders().set('key', 'value');
-        };
-        HttpService.prototype.getHttpNewHeaders = function () {
-            return this.headers.set('Authorization', "Bearer " + this.getToken());
-        };
-        HttpService.prototype.getAttachmentHttpHeaders = function (contentType) {
-            return new i1.HttpHeaders().set('Content-Type', contentType).set('x-ms-blob-type', 'BlockBlob');
-        };
-        HttpService.prototype.putUpload = function (apiRoute, body, contentType) {
-            return this.http.put("" + (this.url1 + apiRoute), body, { headers: this.getAttachmentHttpHeaders(contentType) });
-        };
-        HttpService.prototype.putupload2 = function (apiRoute, body, contenttype) {
-            return this.http
-                .put("" + (this.url1 + apiRoute), body, {
-                headers: this.getAttachmentHttpHeaders(contenttype),
-                observe: 'response'
-            })
-                .pipe(operators.map(function (data) {
-                return data;
-            }));
-        };
-        /**
-         *
-         * @param apiRoute
-         * This function will download the stream file from the API service.
-         * No HTTP required for this stream. So used Window.location.href to download the file
-         */
-        HttpService.prototype.getFormDownloaded = function (apiRoute) {
-            window.location.href = "" + (this.url + apiRoute);
-        };
-        //common http service(optional)
-        HttpService.prototype.handleError = function (error) {
-            var _a, _b;
-            var errorMessage = '';
-            if (error.error instanceof ErrorEvent) {
-                // Client-side errors
-                errorMessage = "Error: " + error.error.message;
-            }
-            else {
-                // Server-side errors
-                errorMessage = "Error Code: " + error.status + "\nMessage: " + (((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message) ? (_b = error === null || error === void 0 ? void 0 : error.error) === null || _b === void 0 ? void 0 : _b.message : error.message);
-            }
-            return throwError.throwError(errorMessage);
-        };
-        HttpService.prototype.getToken = function () {
-            var token = this.tokenKey ? this.tokenKey : 'jwt-token';
-            return sessionStorage.getItem(token);
-        };
-        return HttpService;
-    }());
-    HttpService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, deps: [{ token: i1__namespace.HttpClient }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
-    HttpService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService });
-    i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: HttpService, decorators: [{
-                type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace.HttpClient }, { type: DataStoreService }]; } });
-
-    var RbacService = /** @class */ (function () {
-        function RbacService(httpService) {
-            this.httpService = httpService;
-        }
+        // constructor(private httpService: HttpService) {}
         RbacService.prototype.getAllUserList = function (key) {
             return this.httpService.get(UserConfig.EndPoint.User.getAllUserList + "/" + key);
         };
@@ -953,14 +855,14 @@
         };
         return RbacService;
     }());
-    RbacService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacService, deps: [{ token: HttpService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    RbacService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacService, deps: [{ token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     RbacService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: HttpService }]; } });
+            }], ctorParameters: function () { return [{ type: DataStoreService }]; } });
 
     var AlertService = /** @class */ (function () {
         function AlertService(router) {
@@ -970,7 +872,7 @@
             this.keepAfterRouteChange = false;
             // clear alert messages on route change unless 'keepAfterRouteChange' flag is true
             router.events.subscribe(function (event) {
-                if (event instanceof i1$1.NavigationStart) {
+                if (event instanceof i1.NavigationStart) {
                     if (_this.keepAfterRouteChange) {
                         // only keep for a single route change
                         _this.keepAfterRouteChange = false;
@@ -1012,11 +914,11 @@
         };
         return AlertService;
     }());
-    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace$1.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    AlertService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, deps: [{ token: i1__namespace.Router }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     AlertService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: AlertService, decorators: [{
                 type: i0.Injectable
-            }], ctorParameters: function () { return [{ type: i1__namespace$1.Router }]; } });
+            }], ctorParameters: function () { return [{ type: i1__namespace.Router }]; } });
     var AlertType;
     (function (AlertType) {
         AlertType[AlertType["Success"] = 0] = "Success";
@@ -1193,18 +1095,21 @@
                 }] } });
 
     var PermissionsComponent = /** @class */ (function () {
-        function PermissionsComponent(injector, permissionService, formBuilder, alertService, confirmationService, httpService, _shareData, _storeservice) {
+        function PermissionsComponent(injector, permissionService, formBuilder, alertService, confirmationService, 
+        // private httpService: HttpService,
+        _shareData, _storeservice) {
             this.permissionService = permissionService;
             this.formBuilder = formBuilder;
             this.alertService = alertService;
             this.confirmationService = confirmationService;
-            this.httpService = httpService;
             this._shareData = _shareData;
             this._storeservice = _storeservice;
             this.menuItems = [];
+            this.filteredPermissionList = [];
             this.selectedItem = {};
             this.RBACORG = new RBACINFO();
             this.position = 'top';
+            this.duplicatepages = [];
             this.nodeType = 'page';
             this.saveMode = 'INSERT';
             this.sanitizer = injector.get(platformBrowser.DomSanitizer);
@@ -1219,6 +1124,7 @@
                     console.log(_this.RBACORG, 'RBACORG Permisson');
                     _this.environment = _this.RBACORG['environment'];
                     _this.orgId = parseInt(_this.RBACORG['orgID']);
+                    _this.httpService = res['HTTPSERVICE'];
                     if (_this.orgId) {
                         _this.setPagesList();
                     }
@@ -1451,21 +1357,27 @@
                     command: function (event) {
                         _this.saveMode = 'DELETE';
                         _this.nodeType = _this.selectedItem.type;
-                        _this.confirmationService.confirm({
-                            target: event.target,
-                            message: 'Are you sure that you want to delete?',
-                            icon: 'pi pi-exclamation-triangle',
-                            accept: function () {
-                                //confirm action
-                                _this.deleteItem();
-                            },
-                            reject: function () {
-                                // This is intentional
-                            },
-                        });
+                        event.stopPropagation();
+                        $('#Deleteuser').modal('show');
+                        // this.confirmationService.confirm({
+                        //   target: event.target as EventTarget,
+                        //   message: 'Are you sure that you want to delete?',
+                        //   icon: 'pi pi-exclamation-triangle',
+                        //   accept: () => {
+                        //     //confirm action
+                        //     this.deleteItem();
+                        //   },
+                        //   reject: () => {
+                        //     // This is intentional
+                        //   },
+                        // });
                     }
                 }
             ];
+        };
+        PermissionsComponent.prototype.deletePermission = function () {
+            $('#Deleteuser').modal('hide');
+            this.deleteItem();
         };
         PermissionsComponent.prototype.setPagesList = function () {
             var _this = this;
@@ -1487,6 +1399,7 @@
             var _this = this;
             this.permissionService.getAllPageTree(this.environment.applicationid).subscribe(function (items) {
                 _this.pages = items;
+                _this.duplicatepages = items;
                 if (_this.pages.length) {
                     _this.selectedItem = _this.pages[0];
                 }
@@ -1578,10 +1491,14 @@
                 return false;
             }
         };
+        PermissionsComponent.prototype.searchPermissionList = function (event) {
+            var value = event.target.value.toLowerCase();
+            this.pages = this.duplicatepages.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.name) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+        };
         return PermissionsComponent;
     }());
-    PermissionsComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PermissionsComponent, deps: [{ token: i0__namespace.Injector }, { token: RbacService }, { token: i2__namespace$1.FormBuilder }, { token: AlertService }, { token: i4__namespace.ConfirmationService }, { token: HttpService }, { token: ShareDataService }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    PermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"masteracess\">\r\n            <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n            <p-confirmPopup styleClass=\"delete-popup\"></p-confirmPopup>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Page</span>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" pattern=\"[a-zA-Z0-9]+(\\s[a-zA-Z0-9]+)*\" pInputText />\r\n\r\n            <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n              !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['name'].invalid &&\r\n            pageForm.controls['name'].hasError('required') &&\r\n          (pageForm.controls['name'].dirty || pageForm.controls['name'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['name'].hasError('required')\" class=\"p-error block\">Name is\r\n                required</small>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Route\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"croute\" type=\"text\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Enter Route\" aria-describedby=\"croute\" pattern=\"[a-zA-Z0-9\\/\\\\-]*\" pInputText />\r\n              <div *ngIf=\"\r\n              pageForm.controls['route'].invalid &&\r\n                pageForm.controls['route'].dirty &&\r\n              !pageForm.controls['route'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['route'].errors && pageForm.controls['route'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['route'].invalid &&\r\n            pageForm.controls['route'].hasError('required') &&\r\n          (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['route'].hasError('required')\" class=\"p-error block\">Route is\r\n                required</small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Route is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n          <label for=\"icon\" class=\"referral-form-labels\">\r\n            Icon\r\n            <span class=\"requiredfield text-danger\">*</span>\r\n          </label>\r\n          <div class=\"d-flex\">\r\n            <input id=\"icon\" type=\"text\" formControlName=\"icon\" placeholder=\"Enter Icon Name\"\r\n              aria-describedby=\"cdescription-icon\" pInputText />\r\n            <span class=\"material-symbols-outlined userempty\">\r\n              {{ pageForm.controls['icon'].value }}\r\n            </span>\r\n          </div>\r\n          <div *ngIf=\"\r\n            pageForm.controls['icon'].invalid &&\r\n            (pageForm.controls['icon'].dirty || pageForm.controls['icon'].touched)\r\n          \">\r\n            <small *ngIf=\"pageForm.controls['icon'].invalid\" class=\"p-error block\">Icon is required </small>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Page' : 'Add Page' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block\">Permission Type\r\n                is required\r\n              </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block\">Key is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block\">Description is\r\n                required\r\n              </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}.center-popup{top:40%!important;left:50%!important}.p-confirm-popup{top:40%!important;left:50%!important}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i9__namespace.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i10__namespace.ContextMenu, selector: "p-contextMenu", inputs: ["model", "global", "target", "style", "styleClass", "appendTo", "autoZIndex", "baseZIndex", "triggerEvent"], outputs: ["onShow", "onHide"] }, { type: i11__namespace.ConfirmPopup, selector: "p-confirmPopup", inputs: ["key", "defaultFocus", "showTransitionOptions", "hideTransitionOptions", "autoZIndex", "baseZIndex", "style", "styleClass", "visible"] }, { type: i12__namespace.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i13__namespace.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }, { type: i14__namespace.Checkbox, selector: "p-checkbox", inputs: ["value", "name", "disabled", "binary", "label", "ariaLabelledBy", "ariaLabel", "tabindex", "inputId", "style", "styleClass", "labelStyleClass", "formControl", "checkboxIcon", "readonly", "required", "trueValue", "falseValue"], outputs: ["onChange"] }], directives: [{ type: i2__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i2__namespace$1.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace$1.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i2__namespace$1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2__namespace$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace$1.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i2__namespace$1.PatternValidator, selector: "[pattern][formControlName],[pattern][formControl],[pattern][ngModel]", inputs: ["pattern"] }, { type: i17__namespace.InputText, selector: "[pInputText]" }] });
+    PermissionsComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PermissionsComponent, deps: [{ token: i0__namespace.Injector }, { token: RbacService }, { token: i2__namespace$1.FormBuilder }, { token: AlertService }, { token: i4__namespace.ConfirmationService }, { token: ShareDataService }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Component });
+    PermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"form-group bgiconsearch\">\r\n            <input\r\n              class=\"form-control\"\r\n              placeholder=\"Search by Page Name\"\r\n              type=\"text\"\r\n              (keyup)=\"searchPermissionList($event)\" \r\n              pInputText />\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"masteracess\">\r\n            <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n            <!-- <p-confirmPopup styleClass=\"delete-popup\"></p-confirmPopup> -->\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Page</span>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" pattern=\"[a-zA-Z0-9]+(\\s[a-zA-Z0-9]+)*\" pInputText />\r\n\r\n            <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n              !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['name'].invalid &&\r\n            pageForm.controls['name'].hasError('required') &&\r\n          (pageForm.controls['name'].dirty || pageForm.controls['name'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['name'].hasError('required')\" class=\"p-error block\">Name is\r\n                required</small>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Route\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"croute\" type=\"text\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Enter Route\" aria-describedby=\"croute\" pattern=\"[a-zA-Z0-9\\/\\\\-]*\" pInputText />\r\n              <div *ngIf=\"\r\n              pageForm.controls['route'].invalid &&\r\n                pageForm.controls['route'].dirty &&\r\n              !pageForm.controls['route'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['route'].errors && pageForm.controls['route'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['route'].invalid &&\r\n            pageForm.controls['route'].hasError('required') &&\r\n          (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['route'].hasError('required')\" class=\"p-error block\">Route is\r\n                required</small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Route is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n          <label for=\"icon\" class=\"referral-form-labels\">\r\n            Icon\r\n            <span class=\"requiredfield text-danger\">*</span>\r\n          </label>\r\n          <div class=\"d-flex\">\r\n            <input id=\"icon\" type=\"text\" formControlName=\"icon\" placeholder=\"Enter Icon Name\"\r\n              aria-describedby=\"cdescription-icon\" pInputText />\r\n            <span class=\"material-symbols-outlined userempty\">\r\n              {{ pageForm.controls['icon'].value }}\r\n            </span>\r\n          </div>\r\n          <div *ngIf=\"\r\n            pageForm.controls['icon'].invalid &&\r\n            (pageForm.controls['icon'].dirty || pageForm.controls['icon'].touched)\r\n          \">\r\n            <small *ngIf=\"pageForm.controls['icon'].invalid\" class=\"p-error block\">Icon is required </small>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Page' : 'Add Page' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block\">Permission Type\r\n                is required\r\n              </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block\">Key is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block\">Description is\r\n                required\r\n              </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"modal\" id=\"Deleteuser\" tabindex=\"-1\" role=\"dialog\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Delete Permission</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        Are you sure you want to delete the Permission?\r\n        <div class=\"clearfix\"></div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\"\r\n            (click)=\"deletePermission()\">\r\n            Delete\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" data-dismiss=\"modal\">\r\n            Cancel\r\n          </button>\r\n        </div>\r\n        <div class=\"clearfix\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i8__namespace.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i9__namespace.ContextMenu, selector: "p-contextMenu", inputs: ["model", "global", "target", "style", "styleClass", "appendTo", "autoZIndex", "baseZIndex", "triggerEvent"], outputs: ["onShow", "onHide"] }, { type: i10__namespace.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i11__namespace.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }, { type: i12__namespace.Checkbox, selector: "p-checkbox", inputs: ["value", "name", "disabled", "binary", "label", "ariaLabelledBy", "ariaLabel", "tabindex", "inputId", "style", "styleClass", "labelStyleClass", "formControl", "checkboxIcon", "readonly", "required", "trueValue", "falseValue"], outputs: ["onChange"] }], directives: [{ type: i13__namespace.InputText, selector: "[pInputText]" }, { type: i2__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i2__namespace$1.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace$1.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i2__namespace$1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2__namespace$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace$1.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i2__namespace$1.PatternValidator, selector: "[pattern][formControlName],[pattern][formControl],[pattern][ngModel]", inputs: ["pattern"] }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PermissionsComponent, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1589,7 +1506,7 @@
                         templateUrl: './permissions.component.html',
                         styleUrls: ['./permissions.component.scss']
                     }]
-            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: RbacService }, { type: i2__namespace$1.FormBuilder }, { type: AlertService }, { type: i4__namespace.ConfirmationService }, { type: HttpService }, { type: ShareDataService }, { type: DataStoreService }]; } });
+            }], ctorParameters: function () { return [{ type: i0__namespace.Injector }, { type: RbacService }, { type: i2__namespace$1.FormBuilder }, { type: AlertService }, { type: i4__namespace.ConfirmationService }, { type: ShareDataService }, { type: DataStoreService }]; } });
 
     var RbacPermissionsComponent = /** @class */ (function () {
         function RbacPermissionsComponent(permissionStore, _storeservice) {
@@ -1604,12 +1521,13 @@
                 _this.PERMISSION = val.PERMISSION;
                 _this._storeservice.setData('RBACORG', _this.RBACORG);
                 _this.permissionStore.setStore(_this.PERMISSION);
+                _this._storeservice.setData('HTTPSERVICE', val.httpService);
             });
         };
         return RbacPermissionsComponent;
     }());
     RbacPermissionsComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsComponent, deps: [{ token: PermissionStore }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    RbacPermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent" }, ngImport: i0__namespace, template: "\n      <permissions></permissions>\n  ", isInline: true, components: [{ type: PermissionsComponent, selector: "permissions" }] });
+    RbacPermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent", COMMONSERVICE: "COMMONSERVICE" }, ngImport: i0__namespace, template: "\n      <permissions></permissions>\n  ", isInline: true, components: [{ type: PermissionsComponent, selector: "permissions" }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsComponent, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1622,6 +1540,8 @@
                 }], PERMISSION: [{
                     type: i0.Input
                 }], permissionEvent: [{
+                    type: i0.Input
+                }], COMMONSERVICE: [{
                     type: i0.Input
                 }] } });
 
@@ -1729,15 +1649,15 @@
             tabmenu.TabMenuModule,
             tabview.TabViewModule,
             treeselect.TreeSelectModule,
-            i1.HttpClientModule,
-            i14.CheckboxModule,
-            i13.DropdownModule,
-            i12.CardModule,
+            // HttpClientModule,
+            i12.CheckboxModule,
+            i11.DropdownModule,
+            i10.CardModule,
             confirmdialog.ConfirmDialogModule,
             accordion.AccordionModule,
             message.MessageModule,
             table.TableModule,
-            i17.InputTextModule,
+            i13.InputTextModule,
             calendar.CalendarModule,
             editor.EditorModule,
             fieldset.FieldsetModule,
@@ -1760,8 +1680,8 @@
             password.PasswordModule,
             knob.KnobModule,
             sidebar.SidebarModule,
-            i10.ContextMenuModule,
-            i11.ConfirmPopupModule,
+            i9.ContextMenuModule,
+            confirmpopup.ConfirmPopupModule,
             DirectivesModule,
             AlertModule], exports: [PermissionsComponent] });
     PicsRbacPermissionsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsRbacPermissionsModule, imports: [[
@@ -1772,15 +1692,15 @@
                 tabmenu.TabMenuModule,
                 tabview.TabViewModule,
                 treeselect.TreeSelectModule,
-                i1.HttpClientModule,
-                i14.CheckboxModule,
-                i13.DropdownModule,
-                i12.CardModule,
+                // HttpClientModule,
+                i12.CheckboxModule,
+                i11.DropdownModule,
+                i10.CardModule,
                 confirmdialog.ConfirmDialogModule,
                 accordion.AccordionModule,
                 message.MessageModule,
                 table.TableModule,
-                i17.InputTextModule,
+                i13.InputTextModule,
                 calendar.CalendarModule,
                 editor.EditorModule,
                 fieldset.FieldsetModule,
@@ -1803,8 +1723,8 @@
                 password.PasswordModule,
                 knob.KnobModule,
                 sidebar.SidebarModule,
-                i10.ContextMenuModule,
-                i11.ConfirmPopupModule,
+                i9.ContextMenuModule,
+                confirmpopup.ConfirmPopupModule,
                 DirectivesModule,
                 AlertModule
             ]] });
@@ -1822,15 +1742,15 @@
                             tabmenu.TabMenuModule,
                             tabview.TabViewModule,
                             treeselect.TreeSelectModule,
-                            i1.HttpClientModule,
-                            i14.CheckboxModule,
-                            i13.DropdownModule,
-                            i12.CardModule,
+                            // HttpClientModule,
+                            i12.CheckboxModule,
+                            i11.DropdownModule,
+                            i10.CardModule,
                             confirmdialog.ConfirmDialogModule,
                             accordion.AccordionModule,
                             message.MessageModule,
                             table.TableModule,
-                            i17.InputTextModule,
+                            i13.InputTextModule,
                             calendar.CalendarModule,
                             editor.EditorModule,
                             fieldset.FieldsetModule,
@@ -1853,8 +1773,8 @@
                             password.PasswordModule,
                             knob.KnobModule,
                             sidebar.SidebarModule,
-                            i10.ContextMenuModule,
-                            i11.ConfirmPopupModule,
+                            i9.ContextMenuModule,
+                            confirmpopup.ConfirmPopupModule,
                             DirectivesModule,
                             AlertModule
                         ],
@@ -1968,14 +1888,14 @@
         };
         return MicrostrategyService;
     }());
-    MicrostrategyService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: MicrostrategyService, deps: [{ token: i1__namespace.HttpClient }, { token: AlertService }, { token: PermissionStore }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
+    MicrostrategyService.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: MicrostrategyService, deps: [{ token: i1__namespace$1.HttpClient }, { token: AlertService }, { token: PermissionStore }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Injectable });
     MicrostrategyService.ɵprov = i0__namespace.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: MicrostrategyService, providedIn: 'root' });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: MicrostrategyService, decorators: [{
                 type: i0.Injectable,
                 args: [{
                         providedIn: 'root'
                     }]
-            }], ctorParameters: function () { return [{ type: i1__namespace.HttpClient }, { type: AlertService }, { type: PermissionStore }, { type: DataStoreService }]; } });
+            }], ctorParameters: function () { return [{ type: i1__namespace$1.HttpClient }, { type: AlertService }, { type: PermissionStore }, { type: DataStoreService }]; } });
 
     var RbacPermissionsModule = /** @class */ (function () {
         function RbacPermissionsModule() {
@@ -1984,7 +1904,7 @@
     }());
     RbacPermissionsModule.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsModule, deps: [], target: i0__namespace.ɵɵFactoryTarget.NgModule });
     RbacPermissionsModule.ɵmod = i0__namespace.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsModule, declarations: [RbacPermissionsComponent], imports: [PicsRbacPermissionsModule], exports: [RbacPermissionsComponent] });
-    RbacPermissionsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsModule, providers: [RbacService, MicrostrategyService, i1.HttpClient, HttpService, AlertService, i4.ConfirmationService, PermissionStore, DataStoreService], imports: [[
+    RbacPermissionsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsModule, providers: [RbacService, MicrostrategyService, i1$1.HttpClient, AlertService, i4.ConfirmationService, PermissionStore, DataStoreService], imports: [[
                 PicsRbacPermissionsModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsModule, decorators: [{
@@ -1999,7 +1919,7 @@
                         exports: [
                             RbacPermissionsComponent
                         ],
-                        providers: [RbacService, MicrostrategyService, i1.HttpClient, HttpService, AlertService, i4.ConfirmationService, PermissionStore, DataStoreService]
+                        providers: [RbacService, MicrostrategyService, i1$1.HttpClient, AlertService, i4.ConfirmationService, PermissionStore, DataStoreService]
                     }]
             }] });
 
