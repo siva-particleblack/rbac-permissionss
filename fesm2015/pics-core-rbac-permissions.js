@@ -850,10 +850,10 @@ class PermissionsComponent {
                 icon: PrimeIcons.TRASH,
                 visible: permission.SETTINGS_PER_DELETE,
                 badge: 'SETTINGS_PER_DELETE',
-                command: event => {
+                command: _event => {
                     this.saveMode = 'DELETE';
                     this.nodeType = this.selectedItem.type;
-                    event.stopPropagation();
+                    // _event.stopPropagation()
                     $('#Deleteuser').modal('show');
                     // this.confirmationService.confirm({
                     //   target: event.target as EventTarget,

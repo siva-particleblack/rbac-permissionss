@@ -1354,10 +1354,10 @@
                     icon: i4.PrimeIcons.TRASH,
                     visible: permission.SETTINGS_PER_DELETE,
                     badge: 'SETTINGS_PER_DELETE',
-                    command: function (event) {
+                    command: function (_event) {
                         _this.saveMode = 'DELETE';
                         _this.nodeType = _this.selectedItem.type;
-                        event.stopPropagation();
+                        // _event.stopPropagation()
                         $('#Deleteuser').modal('show');
                         // this.confirmationService.confirm({
                         //   target: event.target as EventTarget,
