@@ -833,27 +833,27 @@ class PermissionsComponent {
                     this.clearForm();
                 }
             },
-            {
-                label: 'Create Permission',
-                icon: PrimeIcons.ARROW_DOWN_RIGHT,
-                visible: permission.SETTINGS_PER_CREATE_PERMISSION,
-                badge: 'SETTINGS_PER_CREATE_PERMISSION',
-                command: _event => {
-                    this.saveMode = 'INSERT';
-                    this.nodeType = this.selectedItem.type;
-                    this.clearForm();
-                    this.createPermissionForm();
-                }
-            },
+            // {
+            //   label: 'Create Permission',
+            //   icon: PrimeIcons.ARROW_DOWN_RIGHT,
+            //   visible: permission.SETTINGS_PER_CREATE_PERMISSION,
+            //   badge: 'SETTINGS_PER_CREATE_PERMISSION',
+            //   command: _event => {
+            //     this.saveMode = 'INSERT';
+            //     this.nodeType = this.selectedItem.type;
+            //     this.clearForm();
+            //     this.createPermissionForm();
+            //   }
+            // },
             {
                 label: 'Delete',
                 icon: PrimeIcons.TRASH,
                 visible: permission.SETTINGS_PER_DELETE,
                 badge: 'SETTINGS_PER_DELETE',
-                command: (event) => {
+                command: event => {
                     this.saveMode = 'DELETE';
                     this.nodeType = this.selectedItem.type;
-                    event.stopPropagation();
+                    // event.stopPropagation();
                     $('#DeletePermission').modal('show');
                     // this.confirmationService.confirm({
                     //   target: event.target as EventTarget,
