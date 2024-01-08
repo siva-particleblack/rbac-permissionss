@@ -38,6 +38,8 @@ export declare class PermissionsComponent implements OnInit {
     sanitizer: DomSanitizer;
     pageAccessService: any;
     pagesList: any;
+    menuType: any;
+    pageType: any;
     RBACORG: RBACINFO;
     orgSubs: Subscription;
     orgId: any;
@@ -64,6 +66,8 @@ export declare class PermissionsComponent implements OnInit {
     private loadContextMenu;
     deletePermission(): void;
     setPagesList(): void;
+    setMenuType(): void;
+    setPageType(): void;
     private loadTree;
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
