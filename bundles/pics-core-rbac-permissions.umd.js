@@ -1391,8 +1391,9 @@
             this.icons = AppIcons.preloadedIcons;
         };
         PermissionsComponent.prototype.checkIcons = function (event) {
-            if (this.icons.includes(event.icon)) {
-                this.showIcon = event.icon;
+            var isSettingsIconExists = this.icons.some(function (icon) { return icon.icon === event.value; });
+            if (isSettingsIconExists) {
+                this.showIcon = event.value;
             }
             else {
                 this.showIcon = 'error';

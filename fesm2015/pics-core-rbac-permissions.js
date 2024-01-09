@@ -885,8 +885,9 @@ class PermissionsComponent {
         this.icons = AppIcons.preloadedIcons;
     }
     checkIcons(event) {
-        if (this.icons.includes(event.icon)) {
-            this.showIcon = event.icon;
+        const isSettingsIconExists = this.icons.some(icon => icon.icon === event.value);
+        if (isSettingsIconExists) {
+            this.showIcon = event.value;
         }
         else {
             this.showIcon = 'error';
