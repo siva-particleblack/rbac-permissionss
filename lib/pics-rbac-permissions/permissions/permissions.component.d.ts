@@ -45,6 +45,7 @@ export declare class PermissionsComponent implements OnInit {
     orgId: any;
     position: string;
     showLinkPage: boolean;
+    showDynamic: boolean;
     environment: any;
     duplicatepages: any[];
     httpService: any;
@@ -68,6 +69,7 @@ export declare class PermissionsComponent implements OnInit {
     setPagesList(): void;
     setMenuType(): void;
     setPageType(): void;
+    onPageTypeChange(event: any): void;
     private loadTree;
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
