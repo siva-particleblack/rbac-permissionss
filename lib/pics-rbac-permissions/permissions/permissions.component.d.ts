@@ -50,6 +50,7 @@ export declare class PermissionsComponent implements OnInit {
     environment: any;
     duplicatepages: any[];
     httpService: any;
+    showIcon: string;
     constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, _shareData: ShareDataService, _storeservice: DataStoreService);
     ngOnInit(): void;
     ngOnDestroy(): void;
@@ -67,6 +68,7 @@ export declare class PermissionsComponent implements OnInit {
     createPermissionForm(): void;
     private loadContextMenu;
     loadIcons(): void;
+    checkIcons(event: any): void;
     deletePermission(): void;
     setPagesList(): void;
     setMenuType(): void;
