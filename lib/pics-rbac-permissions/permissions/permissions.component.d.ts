@@ -40,6 +40,7 @@ export declare class PermissionsComponent implements OnInit {
     pagesList: any;
     menuType: any;
     pageType: any;
+    icons: any;
     RBACORG: RBACINFO;
     orgSubs: Subscription;
     orgId: any;
@@ -65,6 +66,7 @@ export declare class PermissionsComponent implements OnInit {
     removeThumbnail(): void;
     createPermissionForm(): void;
     private loadContextMenu;
+    loadIcons(): void;
     deletePermission(): void;
     setPagesList(): void;
     setMenuType(): void;
