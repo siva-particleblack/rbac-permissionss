@@ -38,6 +38,7 @@ export declare class PermissionsComponent implements OnInit {
     sanitizer: DomSanitizer;
     pageAccessService: any;
     pagesList: any;
+    platformpagesList: any;
     menuType: any;
     pageType: any;
     icons: any;
@@ -47,6 +48,7 @@ export declare class PermissionsComponent implements OnInit {
     position: string;
     showLinkPage: boolean;
     showDynamic: boolean;
+    showParent: boolean;
     environment: any;
     duplicatepages: any[];
     httpService: any;
@@ -71,9 +73,11 @@ export declare class PermissionsComponent implements OnInit {
     checkIcons(event: any): void;
     deletePermission(): void;
     setPagesList(): void;
+    setPlatformPageList(): void;
     setMenuType(): void;
     setPageType(): void;
     onPageTypeChange(event: any): void;
+    onMenuTypeChange(event: any): void;
     private loadTree;
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
