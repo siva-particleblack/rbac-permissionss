@@ -143,7 +143,7 @@
         Organization: {
             getOrganizationList: '/org/organization/all',
             getOrganization: '/platform/page-designer/page/organization/{orgId}?returnUserPage=false&excludeNoActiveVersionPages=true',
-            getPlatformPage: '/platform/menu/tree/getPlatformPage'
+            getPlatformPage: '/platform/menu/getPlatformPage'
         }
     };
     var RBACINFO = /** @class */ (function () {

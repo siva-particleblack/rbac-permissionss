@@ -146,7 +146,7 @@ AccessManagementConfig$1.EndPoint = {
     Organization: {
         getOrganizationList: '/org/organization/all',
         getOrganization: '/platform/page-designer/page/organization/{orgId}?returnUserPage=false&excludeNoActiveVersionPages=true',
-        getPlatformPage: '/platform/menu/tree/getPlatformPage'
+        getPlatformPage: '/platform/menu/getPlatformPage'
     }
 };
 class RBACINFO {
