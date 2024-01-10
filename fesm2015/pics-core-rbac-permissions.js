@@ -906,6 +906,7 @@ class PermissionsComponent {
         ];
     }
     createSubMenu(selectedItem) {
+        this.showParent = false;
         this.pageForm.patchValue({
             menuType: 'page',
             parentid: selectedItem.id,

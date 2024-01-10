@@ -1413,6 +1413,7 @@
             ];
         };
         PermissionsComponent.prototype.createSubMenu = function (selectedItem) {
+            this.showParent = false;
             this.pageForm.patchValue({
                 menuType: 'page',
                 parentid: selectedItem.id,
