@@ -700,7 +700,8 @@ class PermissionsComponent {
             permissiontypeid: ['', Validators.required],
             key: ['', Validators.required],
             description: ['', Validators.required],
-            order: [0]
+            order: [0],
+            menuType: ['', Validators.required],
         });
     }
     onNodeContextMenuSelect(_event) {
@@ -843,7 +844,7 @@ class PermissionsComponent {
         };
         this.menuItems = [
             {
-                label: 'Create Menu',
+                label: 'Create sub-menu',
                 icon: PrimeIcons.ARROW_UP_LEFT,
                 visible: permission.SETTINGS_PER_CREATE_PAGE,
                 badge: 'SETTINGS_PER_CREATE_PAGE',

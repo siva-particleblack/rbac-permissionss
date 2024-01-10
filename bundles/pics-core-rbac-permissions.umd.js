@@ -1204,7 +1204,8 @@
                 permissiontypeid: ['', i2$1.Validators.required],
                 key: ['', i2$1.Validators.required],
                 description: ['', i2$1.Validators.required],
-                order: [0]
+                order: [0],
+                menuType: ['', i2$1.Validators.required],
             });
         };
         PermissionsComponent.prototype.onNodeContextMenuSelect = function (_event) {
@@ -1349,7 +1350,7 @@
             };
             this.menuItems = [
                 {
-                    label: 'Create Menu',
+                    label: 'Create sub-menu',
                     icon: i4.PrimeIcons.ARROW_UP_LEFT,
                     visible: permission.SETTINGS_PER_CREATE_PAGE,
                     badge: 'SETTINGS_PER_CREATE_PAGE',
