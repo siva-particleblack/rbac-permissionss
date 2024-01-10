@@ -1142,7 +1142,7 @@
             this.sanitizer = injector.get(platformBrowser.DomSanitizer);
             this.initializePageForm();
             this.initializePermissionForm();
-            this.showParent = false;
+            this.showParent = true;
         }
         PermissionsComponent.prototype.ngOnInit = function () {
             var _this = this;
@@ -1243,34 +1243,36 @@
             }
         };
         PermissionsComponent.prototype.savePage = function () {
-            // const page = this.pageForm.value;
-            // page.applicationid =this.environment.applicationid;
-            // page.additionalinfo = {
-            //   icon: page.icon
-            // };
-            // if (this.showLinkPage) {
-            //   page.route = `/pages/dynamic-search/search/${page.route}`;
-            // }
-            // if (this.pageForm.valid) {
-            //   page.order = page.order ? Number(page.order) : 1;
-            //   if (this.saveMode === 'INSERT') {
-            //     this.permissionService.createPage(page).subscribe((res: any) => {
-            //       if (this.showLinkPage) {
-            //         page.id = res['data'];
-            //         this.savePermission(page);
-            //       }
-            //       this.alertService.success('Page created successfully.');
-            //       this.loadTree();
-            //     });
-            //   } else {
-            //     this.permissionService.updatePage(page).subscribe(() => {
-            //       this.alertService.success('Page updated successfully.');
-            //       this.loadTree();
-            //     });
-            //   }
-            // } else {
-            //   this.alertService.error('Please Fill All Required Fields.');
-            // }
+            var page = this.pageForm.value;
+            page.applicationid = this.environment.applicationid;
+            page.additionalinfo = {
+                icon: page.icon
+            };
+            if (this.showLinkPage) {
+                page.route = "/pages/dynamic-search/search/" + page.route;
+            }
+            if (this.pageForm.valid) {
+                page.order = page.order ? Number(page.order) : 1;
+                if (this.saveMode === 'INSERT') {
+                    // this.permissionService.createPage(page).subscribe((res: any) => {
+                    //   if (this.showLinkPage) {
+                    //     page.id = res['data'];
+                    //     this.savePermission(page);
+                    //   }
+                    //   this.alertService.success('Page created successfully.');
+                    //   this.loadTree();
+                    // });
+                }
+                else {
+                    // this.permissionService.updatePage(page).subscribe(() => {
+                    //   this.alertService.success('Page updated successfully.');
+                    //   this.loadTree();
+                    // });
+                }
+            }
+            else {
+                this.alertService.error('Please Fill All Required Fields.');
+            }
         };
         PermissionsComponent.prototype.savePermission = function (page) {
             var _this = this;
