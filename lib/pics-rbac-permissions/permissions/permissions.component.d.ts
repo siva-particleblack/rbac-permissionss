@@ -40,7 +40,7 @@ export declare class PermissionsComponent implements OnInit {
     pagesList: any;
     platformpagesList: any;
     menuType: any;
-    pageType: any;
+    pagetype: any;
     icons: any;
     RBACORG: RBACINFO;
     orgSubs: Subscription;
