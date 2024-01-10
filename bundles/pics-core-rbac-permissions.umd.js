@@ -1415,7 +1415,11 @@
         PermissionsComponent.prototype.createSubMenu = function (selectedItem) {
             this.pageForm.patchValue({
                 menuType: 'page',
-                parentid: selectedItem.id
+                parentid: selectedItem.id,
+                name: '',
+                icon: '',
+                pagetype: '',
+                route: ''
             });
         };
         PermissionsComponent.prototype.loadIcons = function () {

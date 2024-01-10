@@ -908,7 +908,11 @@ class PermissionsComponent {
     createSubMenu(selectedItem) {
         this.pageForm.patchValue({
             menuType: 'page',
-            parentid: selectedItem.id
+            parentid: selectedItem.id,
+            name: '',
+            icon: '',
+            pagetype: '',
+            route: ''
         });
     }
     loadIcons() {
