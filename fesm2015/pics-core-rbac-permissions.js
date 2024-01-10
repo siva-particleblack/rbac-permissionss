@@ -719,6 +719,12 @@ class PermissionsComponent {
         else {
             this.pageForm.reset();
             this.pageForm.patchValue(event.node);
+            if (event.node.menuType == 'parent') {
+                this.showParent = true;
+            }
+            else {
+                this.showParent = false;
+            }
             this.pageForm.patchValue({
                 icon: ((_a = event.node.additionalinfo) === null || _a === void 0 ? void 0 : _a.icon) || '',
             });
