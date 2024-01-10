@@ -1,6 +1,6 @@
 {
   "name": "@pics-core/rbac-permissions",
-  "version": "1.0.1-OR.7.26",
+  "version": "1.0.1-OR.7.27",
   "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.",
   "directories": {
     "lib": "lib"

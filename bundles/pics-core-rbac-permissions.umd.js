@@ -1224,7 +1224,8 @@
                 this.pageForm.reset();
                 this.pageForm.patchValue(event.node);
                 this.pageForm.patchValue({
-                    icon: ((_a = event.node.additionalinfo) === null || _a === void 0 ? void 0 : _a.icon) || ''
+                    icon: ((_a = event.node.additionalinfo) === null || _a === void 0 ? void 0 : _a.icon) || '',
+                    menuType: event.node.menuType || ''
                 });
                 if (event.node.route.includes('/pages/dynamic-search/search')) {
                     this.showLinkPage = true;
