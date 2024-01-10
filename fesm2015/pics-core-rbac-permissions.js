@@ -683,9 +683,9 @@ class PermissionsComponent {
             parentid: [null],
             applicationid: [this.environment ? this.environment['applicationid'] : ''],
             name: ['', Validators.required],
-            pagetype: ['', Validators.required],
-            menuType: ['', Validators.required],
-            route: ['', Validators.required],
+            pagetype: [''],
+            menuType: [''],
+            route: [''],
             order: [0],
             ismenu: [false],
             thumbnail: [''],
@@ -701,8 +701,8 @@ class PermissionsComponent {
             key: ['', Validators.required],
             description: ['', Validators.required],
             order: [0],
-            menuType: ['', Validators.required],
-            pagetype: ['', Validators.required]
+            menuType: [''],
+            pagetype: ['']
         });
     }
     onNodeContextMenuSelect(_event) {

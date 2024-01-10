@@ -1187,9 +1187,9 @@
                 parentid: [null],
                 applicationid: [this.environment ? this.environment['applicationid'] : ''],
                 name: ['', i2$1.Validators.required],
-                pagetype: ['', i2$1.Validators.required],
-                menuType: ['', i2$1.Validators.required],
-                route: ['', i2$1.Validators.required],
+                pagetype: [''],
+                menuType: [''],
+                route: [''],
                 order: [0],
                 ismenu: [false],
                 thumbnail: [''],
@@ -1205,8 +1205,8 @@
                 key: ['', i2$1.Validators.required],
                 description: ['', i2$1.Validators.required],
                 order: [0],
-                menuType: ['', i2$1.Validators.required],
-                pagetype: ['', i2$1.Validators.required]
+                menuType: [''],
+                pagetype: ['']
             });
         };
         PermissionsComponent.prototype.onNodeContextMenuSelect = function (_event) {
