@@ -1191,7 +1191,7 @@
                 menuType: [''],
                 route: [''],
                 order: [0],
-                ismenu: [false],
+                ismenu: [true],
                 thumbnail: [''],
                 icon: ['', i2$1.Validators.required]
             });
@@ -1323,6 +1323,7 @@
             }
         };
         PermissionsComponent.prototype.clearForm = function () {
+            this.showIcon = '';
             if (this.nodeType === 'permission') {
                 this.initializePermissionForm();
             }

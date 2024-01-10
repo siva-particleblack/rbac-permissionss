@@ -687,7 +687,7 @@ class PermissionsComponent {
             menuType: [''],
             route: [''],
             order: [0],
-            ismenu: [false],
+            ismenu: [true],
             thumbnail: [''],
             icon: ['', Validators.required]
         });
@@ -817,6 +817,7 @@ class PermissionsComponent {
         }
     }
     clearForm() {
+        this.showIcon = '';
         if (this.nodeType === 'permission') {
             this.initializePermissionForm();
         }
