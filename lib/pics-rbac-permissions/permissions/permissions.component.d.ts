@@ -69,6 +69,7 @@ export declare class PermissionsComponent implements OnInit {
     removeThumbnail(): void;
     createPermissionForm(): void;
     private loadContextMenu;
+    createSubMenu(selectedItem: any): void;
     loadIcons(): void;
     checkIcons(event: any): void;
     deletePermission(): void;
