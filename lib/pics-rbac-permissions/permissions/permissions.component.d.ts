@@ -39,7 +39,7 @@ export declare class PermissionsComponent implements OnInit {
     pageAccessService: any;
     pagesList: any;
     platformpagesList: any;
-    menuType: any;
+    menutype: any;
     pagetype: any;
     icons: any;
     RBACORG: RBACINFO;
@@ -68,8 +68,9 @@ export declare class PermissionsComponent implements OnInit {
     resetForm(): void;
     removeThumbnail(): void;
     createPermissionForm(): void;
-    loadContextMenu(rightclickevent: any): void;
+    loadContextMenu(): void;
     createSubMenu(selectedItem: any): void;
+    createSubParent(selectedItem: any): void;
     loadIcons(): void;
     checkIcons(event: any): void;
     deletePermission(): void;
