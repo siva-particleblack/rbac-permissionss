@@ -17,6 +17,7 @@ export declare class PermissionsComponent implements OnInit {
     private _shareData;
     private _storeservice;
     pages: TreeNode[];
+    allPages: any;
     menuItems: MenuItem[];
     filteredPermissionList: any[];
     pageForm: FormGroup;
@@ -71,6 +72,8 @@ export declare class PermissionsComponent implements OnInit {
     loadContextMenu(): void;
     createSubMenu(selectedItem: any): void;
     createSubParent(selectedItem: any): void;
+    selectParent(): void;
+    selectPage(): void;
     loadIcons(): void;
     checkIcons(event: any): void;
     deletePermission(): void;
