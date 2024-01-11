@@ -1331,7 +1331,7 @@
             else {
                 this.initializePageForm();
             }
-            this.allPages = this.pages;
+            // this.allPages = this.pages;
         };
         PermissionsComponent.prototype.resetForm = function () {
             this.saveMode = '';
@@ -1540,7 +1540,8 @@
             this.permissionService.getAllPageTree(this.environment.applicationid).subscribe(function (items) {
                 _this.pages = items;
                 _this.duplicatepages = items;
-                _this.allPages = items;
+                // this.allPages = items;
+                _this.selectParent();
                 if (_this.pages.length) {
                     _this.selectedItem = _this.pages[0];
                 }

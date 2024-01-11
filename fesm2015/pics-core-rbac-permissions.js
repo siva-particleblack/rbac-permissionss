@@ -825,7 +825,7 @@ class PermissionsComponent {
         else {
             this.initializePageForm();
         }
-        this.allPages = this.pages;
+        // this.allPages = this.pages;
     }
     resetForm() {
         this.saveMode = '';
@@ -1030,7 +1030,8 @@ class PermissionsComponent {
         this.permissionService.getAllPageTree(this.environment.applicationid).subscribe((items) => {
             this.pages = items;
             this.duplicatepages = items;
-            this.allPages = items;
+            // this.allPages = items;
+            this.selectParent();
             if (this.pages.length) {
                 this.selectedItem = this.pages[0];
             }
