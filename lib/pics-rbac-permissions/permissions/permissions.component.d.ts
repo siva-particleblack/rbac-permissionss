@@ -68,7 +68,7 @@ export declare class PermissionsComponent implements OnInit {
     resetForm(): void;
     removeThumbnail(): void;
     createPermissionForm(): void;
-    private loadContextMenu;
+    loadContextMenu(rightclickevent: any): void;
     createSubMenu(selectedItem: any): void;
     loadIcons(): void;
     checkIcons(event: any): void;
