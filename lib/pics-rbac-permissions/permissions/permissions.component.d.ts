@@ -17,6 +17,7 @@ export declare class PermissionsComponent implements OnInit {
     private _shareData;
     private _storeservice;
     pages: TreeNode[];
+    parentPages: any;
     allPages: any;
     menuItems: MenuItem[];
     filteredPermissionList: any[];
@@ -54,6 +55,7 @@ export declare class PermissionsComponent implements OnInit {
     duplicatepages: any[];
     httpService: any;
     showIcon: string;
+    treeData: any[];
     constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, _shareData: ShareDataService, _storeservice: DataStoreService);
     ngOnInit(): void;
     ngOnDestroy(): void;
@@ -84,6 +86,7 @@ export declare class PermissionsComponent implements OnInit {
     onPageTypeChange(event: any): void;
     onMenuTypeChange(event: any): void;
     private loadTree;
+    buildTree(pages: any[], parentid: any): any[];
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
     handleFileInput(fileValue: any): void;
