@@ -1252,13 +1252,14 @@
             }
         };
         PermissionsComponent.prototype.nodeExpand = function (event) {
-            var pageId = event.node.type === 'permission' ? event.node.pageid : event.node.data;
-            var parentId = event.node.type === 'permission' ? event.node.data : 0;
-            if (event.node && event.node.data) {
-                this.permissionService.getPermissionTree(pageId, parentId).subscribe(function (nodes) {
-                    event.node.children = nodes.data;
-                });
-            }
+            console.log();
+            // const pageId = event.node.type === 'permission' ? event.node.pageid : event.node.data;
+            // const parentId = event.node.type === 'permission' ? event.node.data : 0;
+            // if (event.node && event.node.data) {
+            //   this.permissionService.getPermissionTree(pageId, parentId).subscribe((nodes: any) => {
+            //     event.node.children = (<any>nodes).data;
+            //   });
+            // }
         };
         PermissionsComponent.prototype.savePage = function () {
             var _this = this;
