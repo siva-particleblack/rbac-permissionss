@@ -64,6 +64,8 @@ export declare class PermissionsComponent implements OnInit {
     initializePermissionForm(): void;
     onNodeContextMenuSelect(_event: any): void;
     nodeSelect(event: any): void;
+    onNodeClick(event: any): void;
+    onNodeExpandClick(event: any, node: any): void;
     nodeExpand(event: any): void;
     savePage(): void;
     savePermission(page?: any): void;
