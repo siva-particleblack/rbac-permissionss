@@ -1029,8 +1029,7 @@ class PermissionsComponent {
     }
     loadTree() {
         this.permissionService.getAllPageTree(this.environment.applicationid).subscribe((items) => {
-            this.pages = this.buildTree(this.pages, null);
-            ;
+            this.pages = items;
             this.duplicatepages = items;
             // this.allPages = items;
             this.selectParent();
@@ -1038,20 +1037,6 @@ class PermissionsComponent {
                 this.selectedItem = this.pages[0];
             }
         });
-    }
-    buildTree(pages, parentid) {
-        const tree = [];
-        pages
-            .filter(page => page.parentid === parentid)
-            .forEach(page => {
-            const node = {
-                label: page.name,
-                data: page,
-                children: this.buildTree(pages, page.id),
-            };
-            tree.push(node);
-        });
-        return tree;
     }
     deleteItem() {
         this.saveMode = 'UPDATE';

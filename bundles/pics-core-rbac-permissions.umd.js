@@ -1538,8 +1538,7 @@
         PermissionsComponent.prototype.loadTree = function () {
             var _this = this;
             this.permissionService.getAllPageTree(this.environment.applicationid).subscribe(function (items) {
-                _this.pages = _this.buildTree(_this.pages, null);
-                ;
+                _this.pages = items;
                 _this.duplicatepages = items;
                 // this.allPages = items;
                 _this.selectParent();
@@ -1547,21 +1546,6 @@
                     _this.selectedItem = _this.pages[0];
                 }
             });
-        };
-        PermissionsComponent.prototype.buildTree = function (pages, parentid) {
-            var _this = this;
-            var tree = [];
-            pages
-                .filter(function (page) { return page.parentid === parentid; })
-                .forEach(function (page) {
-                var node = {
-                    label: page.name,
-                    data: page,
-                    children: _this.buildTree(pages, page.id),
-                };
-                tree.push(node);
-            });
-            return tree;
         };
         PermissionsComponent.prototype.deleteItem = function () {
             var _this = this;
