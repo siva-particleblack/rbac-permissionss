@@ -13,6 +13,7 @@ import 'rxjs/add/operator/map';
 import * as i2 from '@angular/common';
 import { CommonModule } from '@angular/common';
 import * as i8 from 'primeng/tree';
+import { TreeModule } from 'primeng/tree';
 import * as i9 from 'primeng/contextmenu';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import * as i10 from 'primeng/card';
@@ -1028,7 +1029,8 @@ class PermissionsComponent {
     }
     loadTree() {
         this.permissionService.getAllPageTree(this.environment.applicationid).subscribe((items) => {
-            this.pages = items;
+            this.pages = this.buildTree(this.pages, null);
+            ;
             this.duplicatepages = items;
             // this.allPages = items;
             this.selectParent();
@@ -1036,6 +1038,20 @@ class PermissionsComponent {
                 this.selectedItem = this.pages[0];
             }
         });
+    }
+    buildTree(pages, parentid) {
+        const tree = [];
+        pages
+            .filter(page => page.parentid === parentid)
+            .forEach(page => {
+            const node = {
+                label: page.name,
+                data: page,
+                children: this.buildTree(pages, page.id),
+            };
+            tree.push(node);
+        });
+        return tree;
     }
     deleteItem() {
         this.saveMode = 'UPDATE';
@@ -1291,7 +1307,8 @@ PicsRbacPermissionsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         ContextMenuModule,
         ConfirmPopupModule,
         DirectivesModule,
-        AlertModule], exports: [PermissionsComponent] });
+        AlertModule,
+        TreeModule], exports: [PermissionsComponent] });
 PicsRbacPermissionsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: PicsRbacPermissionsModule, imports: [[
             CommonModule,
             FormsModule,
@@ -1334,7 +1351,8 @@ PicsRbacPermissionsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0
             ContextMenuModule,
             ConfirmPopupModule,
             DirectivesModule,
-            AlertModule
+            AlertModule,
+            TreeModule
         ]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0, type: PicsRbacPermissionsModule, decorators: [{
             type: NgModule,
@@ -1384,7 +1402,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImpo
                         ContextMenuModule,
                         ConfirmPopupModule,
                         DirectivesModule,
-                        AlertModule
+                        AlertModule,
+                        TreeModule
                     ],
                     exports: [
                         PermissionsComponent

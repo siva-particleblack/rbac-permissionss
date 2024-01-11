@@ -84,6 +84,7 @@ export declare class PermissionsComponent implements OnInit {
     onPageTypeChange(event: any): void;
     onMenuTypeChange(event: any): void;
     private loadTree;
+    buildTree(pages: any[], parentid: number | null): any[];
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
     handleFileInput(fileValue: any): void;
