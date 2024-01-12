@@ -1570,6 +1570,9 @@
                 if (children.length > 0) {
                     page.children = children;
                 }
+                else {
+                    page.children = [];
+                }
                 tree.push(page);
             });
             return tree;
