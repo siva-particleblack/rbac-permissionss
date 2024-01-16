@@ -29,6 +29,7 @@ export declare class PermissionsComponent implements OnInit {
     saveMode: string;
     selectedItem: any;
     imageInformation: any;
+    deletedId: number;
     urlPath: any;
     uploadedFile: any;
     attachType: any;
@@ -54,6 +55,7 @@ export declare class PermissionsComponent implements OnInit {
     environment: any;
     duplicatepages: any[];
     httpService: any;
+    modelPermissiomName: string;
     showIcon: string;
     treeData: any[];
     constructor(injector: Injector, permissionService: RbacService, formBuilder: FormBuilder, alertService: AlertService, confirmationService: ConfirmationService, _shareData: ShareDataService, _storeservice: DataStoreService);
@@ -88,12 +90,14 @@ export declare class PermissionsComponent implements OnInit {
     onPageTypeChange(event: any): void;
     onMenuTypeChange(event: any): void;
     private loadTree;
+    cancel(): void;
     buildTree(pages: any[], parentid: any): any[];
     private deleteItem;
     requiredIfValidator(predicate: () => any): (formControl: AbstractControl) => import("@angular/forms").ValidationErrors;
     handleFileInput(fileValue: any): void;
     validateImage(file: any): boolean;
     searchPermissionList(event: Event): void;
+    onModelPermission(value: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PermissionsComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PermissionsComponent, "permissions", never, {}, {}, never, never>;
 }
