@@ -1284,6 +1284,7 @@
             if (this.pageForm.valid) {
                 page.order = page.order ? Number(page.order) : 1;
                 if (this.saveMode === 'INSERT') {
+                    this.showLinkPage = true;
                     this.permissionService.createPage(page).subscribe(function (res) {
                         if (_this.showLinkPage) {
                             page.id = res['data'];

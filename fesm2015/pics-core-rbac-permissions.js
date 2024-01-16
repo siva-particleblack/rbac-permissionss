@@ -780,6 +780,7 @@ class PermissionsComponent {
         if (this.pageForm.valid) {
             page.order = page.order ? Number(page.order) : 1;
             if (this.saveMode === 'INSERT') {
+                this.showLinkPage = true;
                 this.permissionService.createPage(page).subscribe((res) => {
                     if (this.showLinkPage) {
                         page.id = res['data'];
