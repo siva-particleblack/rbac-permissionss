@@ -808,7 +808,8 @@ class PermissionsComponent {
                 key: page.name.toUpperCase().replaceAll(' ', '_'),
                 pageid: page.id,
                 order: 1,
-                permissiontypeid: 1
+                permissiontypeid: 1,
+                parentid: page.parentid
             });
         }
         const permission = Object.assign(Object.assign({}, this.permissionForm.value), { order: +this.permissionForm.value.order });
