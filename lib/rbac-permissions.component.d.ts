@@ -11,8 +11,9 @@ export declare class RbacPermissionsComponent implements OnInit {
     PERMISSION?: any;
     permissionEvent: Observable<any>;
     COMMONSERVICE: Observable<any>;
+    INPUTVALIDATIONMETHOD?: any;
     constructor(permissionStore: PermissionStore, _storeservice: DataStoreService);
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<RbacPermissionsComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RbacPermissionsComponent, "rbac-permissions", never, { "RBACORG": "RBACORG"; "PERMISSION": "PERMISSION"; "permissionEvent": "permissionEvent"; "COMMONSERVICE": "COMMONSERVICE"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RbacPermissionsComponent, "rbac-permissions", never, { "RBACORG": "RBACORG"; "PERMISSION": "PERMISSION"; "permissionEvent": "permissionEvent"; "COMMONSERVICE": "COMMONSERVICE"; "INPUTVALIDATIONMETHOD": "INPUTVALIDATIONMETHOD"; }, {}, never, never>;
 }

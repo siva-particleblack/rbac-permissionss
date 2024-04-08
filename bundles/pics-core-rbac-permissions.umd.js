@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/platform-browser'), require('primeng/api'), require('rxjs/operators'), require('@angular/router'), require('rxjs/add/operator/map'), require('@angular/common'), require('primeng/tree'), require('primeng/contextmenu'), require('primeng/card'), require('primeng/dropdown'), require('primeng/inputtext'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/checkbox'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/dialog'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
-    typeof define === 'function' && define.amd ? define('@pics-core/rbac-permissions', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/platform-browser', 'primeng/api', 'rxjs/operators', '@angular/router', 'rxjs/add/operator/map', '@angular/common', 'primeng/tree', 'primeng/contextmenu', 'primeng/card', 'primeng/dropdown', 'primeng/inputtext', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/checkbox', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/dialog', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"]["rbac-permissions"] = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.platformBrowser, global.i4, global.rxjs.operators, global.ng.router, global.rxjs["add/operator/map"], global.ng.common, global.i8, global.i9, global.i10, global.i11, global.i13, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.checkbox, global.confirmdialog, global.confirmpopup, global.dialog, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
-})(this, (function (exports, i0, rxjs, i2, platformBrowser, i4, operators, i1, map, i14, i8, i9, i10, i11, i13, ngBootstrap, accordion, avatar, badge, button, calendar, checkbox, confirmdialog, confirmpopup, dialog, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, i1$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('rxjs'), require('@angular/forms'), require('@angular/platform-browser'), require('primeng/api'), require('rxjs/operators'), require('@angular/router'), require('rxjs/add/operator/map'), require('@angular/common'), require('primeng/tree'), require('primeng/card'), require('@angular/material/radio'), require('primeng/dropdown'), require('primeng/checkbox'), require('primeng/inputtext'), require('primeng/tooltip'), require('@ng-bootstrap/ng-bootstrap'), require('primeng/accordion'), require('primeng/avatar'), require('primeng/badge'), require('primeng/button'), require('primeng/calendar'), require('primeng/confirmdialog'), require('primeng/confirmpopup'), require('primeng/contextmenu'), require('primeng/dialog'), require('primeng/editor'), require('primeng/fieldset'), require('primeng/fileupload'), require('primeng/inputmask'), require('primeng/inputswitch'), require('primeng/inputtextarea'), require('primeng/knob'), require('primeng/message'), require('primeng/multiselect'), require('primeng/orderlist'), require('primeng/password'), require('primeng/progressspinner'), require('primeng/radiobutton'), require('primeng/ripple'), require('primeng/sidebar'), require('primeng/speeddial'), require('primeng/steps'), require('primeng/table'), require('primeng/tabmenu'), require('primeng/tabview'), require('primeng/toast'), require('primeng/treeselect'), require('@angular/common/http')) :
+    typeof define === 'function' && define.amd ? define('@pics-core/rbac-permissions', ['exports', '@angular/core', 'rxjs', '@angular/forms', '@angular/platform-browser', 'primeng/api', 'rxjs/operators', '@angular/router', 'rxjs/add/operator/map', '@angular/common', 'primeng/tree', 'primeng/card', '@angular/material/radio', 'primeng/dropdown', 'primeng/checkbox', 'primeng/inputtext', 'primeng/tooltip', '@ng-bootstrap/ng-bootstrap', 'primeng/accordion', 'primeng/avatar', 'primeng/badge', 'primeng/button', 'primeng/calendar', 'primeng/confirmdialog', 'primeng/confirmpopup', 'primeng/contextmenu', 'primeng/dialog', 'primeng/editor', 'primeng/fieldset', 'primeng/fileupload', 'primeng/inputmask', 'primeng/inputswitch', 'primeng/inputtextarea', 'primeng/knob', 'primeng/message', 'primeng/multiselect', 'primeng/orderlist', 'primeng/password', 'primeng/progressspinner', 'primeng/radiobutton', 'primeng/ripple', 'primeng/sidebar', 'primeng/speeddial', 'primeng/steps', 'primeng/table', 'primeng/tabmenu', 'primeng/tabview', 'primeng/toast', 'primeng/treeselect', '@angular/common/http'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global["pics-core"] = global["pics-core"] || {}, global["pics-core"]["rbac-permissions"] = {}), global.ng.core, global.rxjs, global.ng.forms, global.ng.platformBrowser, global.i4, global.rxjs.operators, global.ng.router, global.rxjs["add/operator/map"], global.ng.common, global.i8, global.i9, global.ng.material.radio, global.i11, global.i12, global.i13, global.i16, global.ngBootstrap, global.accordion, global.avatar, global.badge, global.button, global.calendar, global.confirmdialog, global.confirmpopup, global.contextmenu, global.dialog, global.editor, global.fieldset, global.fileupload, global.inputmask, global.inputswitch, global.inputtextarea, global.knob, global.message, global.multiselect, global.orderlist, global.password, global.progressspinner, global.radiobutton, global.ripple, global.sidebar, global.speeddial, global.steps, global.table, global.tabmenu, global.tabview, global.toast, global.treeselect, global.ng.common.http));
+})(this, (function (exports, i0, rxjs, i2, platformBrowser, i4, operators, i1, map, i14, i8, i9, i10, i11, i12, i13, i16, ngBootstrap, accordion, avatar, badge, button, calendar, confirmdialog, confirmpopup, contextmenu, dialog, editor, fieldset, fileupload, inputmask, inputswitch, inputtextarea, knob, message, multiselect, orderlist, password, progressspinner, radiobutton, ripple, sidebar, speeddial, steps, table, tabmenu, tabview, toast, treeselect, i1$1) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -31,7 +31,9 @@
     var i9__namespace = /*#__PURE__*/_interopNamespace(i9);
     var i10__namespace = /*#__PURE__*/_interopNamespace(i10);
     var i11__namespace = /*#__PURE__*/_interopNamespace(i11);
+    var i12__namespace = /*#__PURE__*/_interopNamespace(i12);
     var i13__namespace = /*#__PURE__*/_interopNamespace(i13);
+    var i16__namespace = /*#__PURE__*/_interopNamespace(i16);
     var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
 
     var RbacPermissionsService = /** @class */ (function () {
@@ -715,29 +717,74 @@
                 type: i0.Injectable
             }], ctorParameters: function () { return []; } });
 
-    var AppIcons = /** @class */ (function () {
-        function AppIcons() {
+    var AppConstants = /** @class */ (function () {
+        function AppConstants() {
         }
-        return AppIcons;
+        return AppConstants;
     }());
-    AppIcons.preloadedIcons = [
-        { icon: 'layers' },
-        { icon: 'apps' },
-        { icon: 'description' },
-        { icon: 'admin_panel_settings' },
-        { icon: 'analytics' },
-        { icon: 'check' },
-        { icon: 'list' },
-        { icon: 'dashboard' },
-        { icon: 'circle' },
-        { icon: 'box' },
-        { icon: 'radio' },
-        { icon: 'tab' },
-        { icon: 'settings' },
-        { icon: 'bookmark' },
-        { icon: 'map' },
-        { icon: 'book' },
-        { icon: "format_list_bulleted" }
+    AppConstants.errorMessage = 'Something went wrong!';
+    AppConstants.regexEmail = '^[0-9a-zA-Z.-]+[@][0-9a-zA-Z.-]+[.][0-9a-zA-Z]{2,}$';
+    AppConstants.iconList = [
+        { label: 'Apps', value: 'apps' },
+        { label: 'Admin Settings', value: 'admin_panel_settings' },
+        { label: 'Description', value: 'description' },
+        { label: 'Analytics', value: 'analytics' },
+        { label: 'Settings', value: 'settings' },
+        { label: 'Library', value: 'library_books' },
+        { label: 'Long Receipt', value: 'receipt_long' },
+        { label: 'List', value: 'list' },
+        { label: 'Layers', value: 'layers' },
+        { label: 'Summarize', value: 'summarize' },
+        { label: 'Featured List', value: 'featured_play_list' },
+        { label: 'Contract', value: 'contract' },
+        { label: 'List Add', value: 'list_alt_add' },
+        { label: 'Inactive Order', value: 'inactive_order' },
+        { label: 'Receipt', value: 'receipt' },
+        { label: 'Dataset', value: 'dataset' },
+        { label: 'Density', value: 'density_medium' },
+        { label: 'Data Thresholding', value: 'data_thresholding' },
+        { label: 'View Comfy', value: 'view_comfy_alt' },
+        { label: 'View Compact', value: 'view_compact_alt' },
+        { label: 'Rebase', value: 'rebase' },
+        { label: 'Data Check', value: 'data_check' },
+        { label: 'Check', value: 'check' },
+        { label: 'Right Panel Close', value: 'right_panel_close' },
+        { label: 'Toolbar', value: 'toolbar' },
+        { label: 'User List', value: 'patient_list' },
+        { label: 'Tabs', value: 'tabs' },
+        { label: 'Single Tab', value: 'tab' },
+        { label: 'Shelf Position', value: 'shelf_position' },
+        { label: 'Call', value: 'call' },
+        { label: 'Bookmark', value: 'bookmark' },
+        { label: 'Map', value: 'map' },
+        { label: 'Book', value: 'book' },
+        { label: 'Box', value: 'box' },
+        { label: 'Lock', value: 'lock' },
+        { label: 'Star', value: 'star' },
+        { label: 'Menu', value: 'menu' },
+        { label: 'School', value: 'school' },
+        { label: 'Calendar', value: 'calendar_month' },
+        { label: 'Circle', value: 'circle' },
+        { label: 'Home', value: 'home' },
+        { label: 'Bulleted List', value: 'format_list_bulleted' },
+        { label: 'Database', value: 'database' },
+        { label: 'View Timeline', value: 'view_timeline' },
+        { label: 'Settings Account Box', value: 'settings_account_box' },
+        { label: 'Iframe', value: 'iframe' },
+        { label: 'Bottom Panel Close', value: 'bottom_panel_close' },
+        { label: 'Bubbles', value: 'bubbles' },
+        { label: 'Task', value: 'task' },
+        { label: 'Quiz', value: 'quiz' },
+        { label: 'Contact Mail', value: 'contact_mail' },
+        { label: 'File Copy', value: 'file_copy' },
+        { label: 'Post Add', value: 'post_add' },
+        { label: 'Import Contacts', value: 'import_contacts' },
+        { label: 'Pending Actions', value: 'pending_actions' },
+        { label: 'History Edu', value: 'history_edu' },
+        { label: 'Space Dashboard', value: 'space_dashboard' },
+        { label: 'Dashboard', value: 'dashboard' },
+        { label: 'Table Chart', value: 'table_chart' },
+        { label: 'Edit Document', value: 'edit_document' },
     ];
 
     var RbacService = /** @class */ (function () {
@@ -1132,26 +1179,33 @@
             this.confirmationService = confirmationService;
             this._shareData = _shareData;
             this._storeservice = _storeservice;
-            this.parentPages = [];
-            this.allPages = [];
             this.menuItems = [];
             this.filteredPermissionList = [];
             this.selectedItem = {};
             this.RBACORG = new RBACINFO();
             this.position = 'top';
             this.duplicatepages = [];
-            this.modelPermissiomName = '';
+            this.dublicateIconList = [];
             this.treeData = [];
+            this.showDeleteBtn = false;
+            this.hidePage = true;
+            this.formSubmit = false;
+            this.eventNode = '';
+            this.selectedPageType = '';
+            this.validationErrors = {};
             this.nodeType = 'page';
             this.saveMode = 'INSERT';
             this.sanitizer = injector.get(platformBrowser.DomSanitizer);
             this.initializePageForm();
             this.initializePermissionForm();
-            this.showParent = true;
+            var iconArray = AppConstants.iconList;
+            this.iconList = iconArray.sort(function (a, b) { return a.label.localeCompare(b.label); });
+            this.dublicateIconList = this.iconList;
         }
         PermissionsComponent.prototype.ngOnInit = function () {
             var _this = this;
             this.orgSubs = this._storeservice.currentStore.subscribe(function (res) {
+                _this.inputValidationMethod = res['INPUTVALIDATIONMETHOD'];
                 if (res['RBACORG'] && res['RBACORG'] !== '') {
                     _this.RBACORG = res['RBACORG'];
                     console.log(_this.RBACORG, 'RBACORG Permisson');
@@ -1160,14 +1214,22 @@
                     _this.httpService = res['HTTPSERVICE'];
                     if (_this.orgId) {
                         _this.setPagesList();
-                        _this.setPlatformPageList();
                         _this.setMenuType();
-                        _this.setPageType();
+                        _this.setPlatformPageList();
                     }
                     if (_this.environment) {
                         _this.loadInitial();
                     }
                 }
+            });
+            this.search = new i2.FormControl();
+            this.search.valueChanges
+                .pipe(operators.debounceTime(500), operators.distinctUntilChanged(), operators.map(function (value) { return value === null || value === void 0 ? void 0 : value.toLowerCase(); }))
+                .subscribe(function (value) {
+                var filtered = _this.pages.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.name) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+                var filteredIds = filtered.map(function (item) { return item.id; });
+                var child = _this.pages.filter(function (item) { return filteredIds.includes(item.parentid); });
+                _this.treeData = _this.buildTree(__spreadArray(__spreadArray([], __read(filtered)), __read(child)), null, true);
             });
         };
         PermissionsComponent.prototype.ngOnDestroy = function () {
@@ -1177,7 +1239,6 @@
             var _this = this;
             this.loadTree();
             this.loadContextMenu();
-            this.loadIcons();
             this.permissionService.getPermissionsTree(this.environment.applicationid).subscribe(function (items) {
                 _this.permissions = items.data;
             });
@@ -1191,13 +1252,12 @@
                 parentid: [null],
                 applicationid: [this.environment ? this.environment['applicationid'] : ''],
                 name: ['', i2.Validators.required],
-                pagetype: [''],
-                menutype: [''],
-                route: [''],
+                route: [null, i2.Validators.required],
                 order: [0],
                 ismenu: [true],
                 thumbnail: [''],
-                icon: ['', i2.Validators.required]
+                icon: [null, i2.Validators.required],
+                pageTypeMenu: ['platform'],
             });
         };
         PermissionsComponent.prototype.initializePermissionForm = function () {
@@ -1208,51 +1268,102 @@
                 permissiontypeid: ['', i2.Validators.required],
                 key: ['', i2.Validators.required],
                 description: ['', i2.Validators.required],
-                order: [0],
-                menutype: [''],
-                pagetype: ['']
+                order: [0]
             });
+        };
+        PermissionsComponent.prototype.buildTree = function (pages, parentid, isSearch) {
+            var _this = this;
+            var tree = [];
+            pages
+                .filter(function (page) { return page.parentid === parentid; })
+                .forEach(function (page) {
+                var children = _this.buildTree(pages, page.id, isSearch);
+                if (children.length > 0) {
+                    page.children = children;
+                }
+                else {
+                    page.children = [];
+                }
+                var filteredPage = page;
+                if (isSearch && page.children.length) {
+                    var uniqueArray = page.children.filter(function (obj, index, self) {
+                        return index === self.findIndex(function (innerObj) { return innerObj.id === obj.id; });
+                    });
+                    filteredPage = Object.assign(Object.assign({}, filteredPage), { children: uniqueArray });
+                }
+                tree.push(filteredPage);
+            });
+            return tree;
+        };
+        PermissionsComponent.prototype.onInput = function (event, fieldtype, label, required) {
+            var error = this.inputValidationMethod(event, fieldtype, label, required);
+            if (error && typeof error === 'string') {
+                this.validationErrors[label] = error;
+            }
+            else {
+                delete this.validationErrors[label];
+            }
+        };
+        PermissionsComponent.prototype.clearsearch = function () {
+            this.search.setValue('');
         };
         PermissionsComponent.prototype.onNodeContextMenuSelect = function (_event) {
             console.log();
         };
-        PermissionsComponent.prototype.nodeSelect = function (event) {
-            var _a, _b, _c, _d;
-            this.saveMode = 'UPDATE';
-            this.showLinkPage = false;
-            this.nodeType = event.node.type;
-            if (event.node.type === 'permission') {
-                this.permissionForm.reset();
-                this.permissionForm.patchValue(event.node);
+        PermissionsComponent.prototype.nodeSelect = function (event, isFromNode) {
+            var _a, _b, _c, _d, _e, _f, _g;
+            this.validationErrors = {};
+            this.formSubmit = false;
+            this.eventNode = event.node ? event.node : '';
+            this.selectedPageType = '';
+            if (isFromNode && this.eventNode) {
+                this.saveMode = 'UPDATE';
+            }
+            else if (!isFromNode && this.eventNode) {
+                this.saveMode = 'UPDATE';
             }
             else {
-                this.pageForm.reset();
-                this.pageForm.patchValue(event.node);
-                if (event.node.menutype == 'parent') {
-                    this.showParent = true;
-                }
-                else {
-                    this.showParent = false;
-                }
-                if (!event.node.pagetype || event.node.pagetype == 'dynamic' || event.node.pagetype == '') {
-                    this.showDynamic = true;
-                }
-                else {
-                    this.showDynamic = false;
-                }
-                this.pageForm.patchValue({
-                    icon: ((_a = event.node.additionalinfo) === null || _a === void 0 ? void 0 : _a.icon) || '',
-                });
-                if (event.node.route.includes('/pages/dynamic-search/search')) {
-                    this.showLinkPage = true;
-                    this.pageForm.patchValue({
-                        route: event.node.route.split('/')[4]
-                    });
-                }
-                this.imageInformation = ((_d = (_c = (_b = event.node.additionalinfo) === null || _b === void 0 ? void 0 : _b.thumbnail) === null || _c === void 0 ? void 0 : _c.fileName) === null || _d === void 0 ? void 0 : _d.split('/')[1]) || '';
+                this.saveMode = 'INSERT';
             }
-        };
-        PermissionsComponent.prototype.onNodeClick = function (event) {
+            this.pages = this.filteredParentPages;
+            this.duplicatePlatformPagesList = this.platformPagesList;
+            this.duplicateDynamicPagesList = this.pagesList;
+            if (this.eventNode) {
+                this.showDeleteBtn = true;
+                this.showLinkPage = false;
+                this.nodeType = event.node.type;
+                this.pages = this.pages.filter(function (p) { return p['parentid'] !== event.node.id; });
+                this.selectedPagePermission = this.permissions.filter(function (p) { return p.pageid === event.node.id; });
+                if (event.node.type === 'permission') {
+                    this.permissionForm.reset();
+                    this.permissionForm.patchValue(event.node);
+                }
+                else {
+                    this.pageForm.reset();
+                    this.pageForm.patchValue(event.node);
+                    this.pageForm.patchValue;
+                    var iconVal = ((_b = (_a = event.node) === null || _a === void 0 ? void 0 : _a.additionalinfo) === null || _b === void 0 ? void 0 : _b.icon) ? (_d = (_c = event.node) === null || _c === void 0 ? void 0 : _c.additionalinfo) === null || _d === void 0 ? void 0 : _d.icon.toLowerCase().replace(/[A-Z]/g, function (char) { return char.toLowerCase(); }) : '';
+                    this.getSelectedLabel(iconVal);
+                    this.pageForm.patchValue({
+                        icon: iconVal
+                    });
+                    this.pageForm.patchValue({
+                        pageTypeMenu: 'platform'
+                    });
+                    this.eventNode["selectedpagemenutype"] = 'platform';
+                    if (event.node.route.includes('/pages/dynamic-search/search')) {
+                        this.showLinkPage = true;
+                        this.pageForm.patchValue({
+                            pageTypeMenu: 'dynamic'
+                        });
+                        this.pageForm.patchValue({
+                            route: event.node.route.split('/')[4]
+                        });
+                        this.eventNode["selectedpagemenutype"] = 'dynamic';
+                    }
+                    this.imageInformation = ((_g = (_f = (_e = event.node.additionalinfo) === null || _e === void 0 ? void 0 : _e.thumbnail) === null || _f === void 0 ? void 0 : _f.fileName) === null || _g === void 0 ? void 0 : _g.split('/')[1]) || '';
+                }
+            }
         };
         PermissionsComponent.prototype.onNodeExpandClick = function (event, node) {
             if (node.menutype !== 'page') {
@@ -1262,7 +1373,6 @@
             }
         };
         PermissionsComponent.prototype.nodeExpand = function (event) {
-            console.log();
             // const pageId = event.node.type === 'permission' ? event.node.pageid : event.node.data;
             // const parentId = event.node.type === 'permission' ? event.node.data : 0;
             // if (event.node && event.node.data) {
@@ -1271,6 +1381,36 @@
             //   });
             // }
         };
+        PermissionsComponent.prototype.searchIconList = function (event) {
+            var value = event.target.value.toLowerCase();
+            this.dublicateIconList = this.iconList.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.label) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+        };
+        PermissionsComponent.prototype.resetIconList = function () {
+            this.dublicateIconList = this.iconList;
+        };
+        PermissionsComponent.prototype.searchDynamicPageList = function (event) {
+            var value = event.target.value.toLowerCase();
+            this.duplicateDynamicPagesList = this.pagesList.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.value) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+        };
+        PermissionsComponent.prototype.resetDynamicPageList = function () {
+            this.duplicateDynamicPagesList = this.pagesList;
+        };
+        PermissionsComponent.prototype.resetParentPageList = function () {
+            this.pages = this.filteredParentPages;
+        };
+        PermissionsComponent.prototype.searchPlatformPageList = function (event) {
+            var value = event.target.value.toLowerCase();
+            this.duplicatePlatformPagesList = this.platformPagesList.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.pagename) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
+        };
+        PermissionsComponent.prototype.resetPlatformPageList = function () {
+            this.duplicatePlatformPagesList = this.platformPagesList;
+        };
+        PermissionsComponent.prototype.getSelectedLabel = function (val) {
+            var _a;
+            this.dublicateIconList = this.iconList;
+            var filteredIcon = this.iconList.filter(function (i) { return i.value === val; });
+            this.selectedIconLabel = (_a = filteredIcon[0]) === null || _a === void 0 ? void 0 : _a.label;
+        };
         PermissionsComponent.prototype.savePage = function () {
             var _this = this;
             var page = this.pageForm.value;
@@ -1278,67 +1418,92 @@
             page.additionalinfo = {
                 icon: page.icon
             };
+            this.formSubmit = true;
             if (this.showLinkPage) {
                 page.route = "/pages/dynamic-search/search/" + page.route;
             }
             if (this.pageForm.valid) {
                 page.order = page.order ? Number(page.order) : 1;
                 if (this.saveMode === 'INSERT') {
-                    this.showLinkPage = true;
                     this.permissionService.createPage(page).subscribe(function (res) {
-                        if (_this.showLinkPage) {
-                            page.id = res['data'];
-                            _this.savePermission(page);
-                        }
-                        _this.alertService.success('Page created successfully.');
+                        // if (this.showLinkPage) {
+                        page.id = res['data'];
+                        _this.savePermission(page);
+                        _this.eventNode = '';
+                        // }
+                        _this.alertService.success('Menu created successfully.');
                         _this.loadTree();
+                    }, function (error) {
+                        var _a;
+                        if (error && ((_a = error === null || error === void 0 ? void 0 : error.error) === null || _a === void 0 ? void 0 : _a.message.includes('already exists'))) {
+                            _this.alertService.error("Menu '" + (page === null || page === void 0 ? void 0 : page.name) + "' already exists.");
+                        }
+                        else {
+                            _this.alertService.error(AppConstants.errorMessage);
+                        }
                     });
                 }
                 else {
                     this.permissionService.updatePage(page).subscribe(function () {
-                        _this.alertService.success('Page updated successfully.');
+                        var pageDet = Object.assign(Object.assign({}, page), { pagePermissionId: _this.selectedPagePermission[0].id });
+                        _this.savePermission(pageDet);
+                        _this.alertService.success('Menu updated successfully.');
+                        _this.loadTree();
+                        _this.resetMenu(true);
+                    });
+                }
+                this.clearsearch();
+            }
+        };
+        Object.defineProperty(PermissionsComponent.prototype, "formValidate", {
+            get: function () {
+                return this.pageForm.controls;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        PermissionsComponent.prototype.savePermission = function (page) {
+            var _this = this;
+            if (page) {
+                this.permissionForm.patchValue({
+                    id: (page === null || page === void 0 ? void 0 : page.pagePermissionId) ? page === null || page === void 0 ? void 0 : page.pagePermissionId : 0,
+                    description: page.name,
+                    key: page.name.toUpperCase().replaceAll(' ', '_'),
+                    pageid: page.id,
+                    order: 1,
+                    permissiontypeid: 1
+                });
+            }
+            var permission = Object.assign(Object.assign({}, this.permissionForm.value), { order: +this.permissionForm.value.order });
+            // if (!permission.id) {
+            //   permission = {
+            //     ...permission,
+            //     id: 0
+            //   }
+            // }
+            if (this.permissionForm.valid) {
+                permission.order = permission.order ? Number(permission.order) : 1;
+                delete permission.readonly;
+                if (this.saveMode === 'INSERT') {
+                    this.permissionService.createPermission(permission).subscribe(function () {
+                        // this.alertService.success('Permission created successfully.');
+                        _this.loadTree();
+                        _this.resetMenu(true);
+                    });
+                }
+                else {
+                    this.permissionService.updatePermission(permission).subscribe(function () {
+                        // this.alertService.success('Permission updated successfully.');
+                        _this.selectedPagePermission = '';
                         _this.loadTree();
                     });
                 }
             }
             else {
-                this.alertService.error('Please Fill All Required Fields.');
+                // this.alertService.error('Invalid permission data.');
             }
-        };
-        PermissionsComponent.prototype.savePermission = function (page) {
-            var _this = this;
-            if (page) {
-                this.permissionForm.patchValue({
-                    description: page.name,
-                    key: page.name.toUpperCase().replaceAll(' ', '_'),
-                    pageid: page.id,
-                    order: 1,
-                    permissiontypeid: 1,
-                    parentid: page.parentid
-                });
-            }
-            var permission = Object.assign(Object.assign({}, this.permissionForm.value), { order: +this.permissionForm.value.order });
-            // if (this.permissionForm.valid) {
-            permission.order = permission.order ? Number(permission.order) : 1;
-            delete permission.readonly;
-            if (this.saveMode === 'INSERT') {
-                this.permissionService.createPermission(permission).subscribe(function () {
-                    _this.alertService.success('Permission created successfully.');
-                    _this.loadTree();
-                });
-            }
-            else {
-                this.permissionService.updatePermission(permission).subscribe(function () {
-                    _this.alertService.success('Permission updated successfully.');
-                    _this.loadTree();
-                });
-            }
-            // } else {
-            // this.alertService.error('Invalid permission data.');
-            // }
         };
         PermissionsComponent.prototype.clearForm = function () {
-            this.showIcon = '';
             if (this.nodeType === 'permission') {
                 this.initializePermissionForm();
             }
@@ -1346,11 +1511,98 @@
                 this.initializePageForm();
             }
         };
-        PermissionsComponent.prototype.resetForm = function () {
-            this.saveMode = '';
+        PermissionsComponent.prototype.selectType = function (type, event) {
+            console.log(event, "radio event");
+            this.formSubmit = false;
+            this.dublicateIconList = this.iconList;
+            this.pages = this.filteredParentPages;
+            this.duplicatePlatformPagesList = this.platformPagesList;
+            this.duplicateDynamicPagesList = this.pagesList;
+            this.validationErrors = {};
+            if (type === 'platform') {
+                this.showLinkPage = false;
+                this.pageForm.patchValue({
+                    pageTypeMenu: type
+                });
+                this.selectedPageType = type;
+                this.saveMode = 'INSERT';
+                this.nodeType = 'page';
+                this.clearForm();
+                this.loadTree();
+            }
+            else if (type === 'dynamic') {
+                this.showLinkPage = true;
+                this.pageForm.patchValue({
+                    pageTypeMenu: type
+                });
+                this.selectedPageType = type;
+                this.saveMode = 'INSERT';
+                this.nodeType = 'page';
+                this.clearForm();
+                this.loadTree();
+            }
+            this.clearsearch();
+            // if(this.eventNode.selectedpagemenutype == type){
+            //   this.nodeSelect({ node: this.eventNode }, false);
+            // }
+        };
+        PermissionsComponent.prototype.setPlatformPageList = function () {
+            var _this = this;
+            this.permissionService.getPlatformPage().subscribe(function (res) {
+                var data = res['data'];
+                if (data && (data === null || data === void 0 ? void 0 : data.length)) {
+                    _this.platformPagesList = data.sort(function (a, b) { return a.pagename.localeCompare(b.pagename); });
+                    _this.duplicatePlatformPagesList = _this.platformPagesList;
+                }
+            });
+        };
+        PermissionsComponent.prototype.setMenuType = function () {
+            this.menutype = [
+                { name: 'Parent', value: 'parent' },
+                { name: 'Page', value: 'page' }
+            ];
+        };
+        PermissionsComponent.prototype.resetMenu = function (isNewAdd) {
+            this.validationErrors = {};
+            this.showLinkPage = false;
+            this.formSubmit = false;
+            this.showDeleteBtn = false;
+            this.saveMode = 'INSERT';
+            this.nodeType = 'page';
+            this.dublicateIconList = this.iconList;
+            this.pages = this.filteredParentPages;
+            this.duplicatePlatformPagesList = this.platformPagesList;
+            this.duplicateDynamicPagesList = this.pagesList;
             this.imageInformation = '';
             this.pageForm.reset();
+            this.permissionForm.reset();
+            this.clearsearch();
             this.clearForm();
+            if (this.selectedPageType) {
+                this.pageForm.patchValue({
+                    pageTypeMenu: this.selectedPageType
+                });
+                this.showLinkPage = this.selectedPageType == 'dynamic' ? true : false;
+            }
+            else {
+                this.pageForm.patchValue({
+                    pageTypeMenu: 'platform'
+                });
+            }
+            if (isNewAdd) {
+                this.eventNode = '';
+            }
+        };
+        PermissionsComponent.prototype.resetForm = function () {
+            this.validationErrors = {};
+            this.formSubmit = false;
+            if (this.saveMode == 'INSERT') {
+                this.resetMenu(false);
+            }
+            else {
+                this.nodeSelect({ node: this.eventNode }, false);
+                this.clearsearch();
+            }
         };
         PermissionsComponent.prototype.removeThumbnail = function () {
             this.pageForm.controls['thumbnail'].reset();
@@ -1384,127 +1636,71 @@
             };
             this.menuItems = [
                 {
-                    label: 'Create sub-parent',
+                    label: 'Create Page',
                     icon: i4.PrimeIcons.ARROW_UP_LEFT,
                     visible: permission.SETTINGS_PER_CREATE_PAGE,
                     badge: 'SETTINGS_PER_CREATE_PAGE',
                     command: function (_event) {
-                        if (_this.selectedItem.menutype == 'page') {
-                            _this.alertService.error('Cannot create parent inside the menu');
-                        }
-                        else {
-                            _this.saveMode = 'INSERT';
-                            _this.nodeType = 'page';
-                            _this.showLinkPage = false;
-                            _this.createSubParent(_this.selectedItem);
-                        }
+                        _this.saveMode = 'INSERT';
+                        _this.nodeType = 'page';
+                        _this.showLinkPage = false;
+                        _this.clearForm();
                     }
                 },
                 {
-                    label: 'Create sub-menu',
+                    label: 'Link Page',
                     icon: i4.PrimeIcons.ARROW_UP_LEFT,
                     visible: permission.SETTINGS_PER_CREATE_PAGE,
-                    badge: 'SETTINGS_PER_CREATE_PAGE',
                     command: function (_event) {
-                        if (_this.selectedItem.menutype == 'page') {
-                            _this.alertService.error('Cannot create menu inside the menu');
-                        }
-                        else {
-                            _this.saveMode = 'INSERT';
-                            _this.nodeType = 'page';
-                            _this.showLinkPage = false;
-                            _this.createSubMenu(_this.selectedItem);
-                            // this.clearForm();
-                        }
+                        _this.saveMode = 'INSERT';
+                        _this.nodeType = 'page';
+                        _this.showLinkPage = true;
+                        _this.clearForm();
                     }
                 },
-                // {
-                //   label: 'Link Page',
-                //   icon: PrimeIcons.ARROW_UP_LEFT,
-                //   visible: permission.SETTINGS_PER_CREATE_PAGE,
-                //   command: (_event: any) => {
-                //     this.saveMode = 'INSERT';
-                //     this.nodeType = 'page';
-                //     this.showLinkPage = true;
-                //     this.clearForm();
-                //   }
-                // },
-                // {
-                //   label: 'Create Permission',
-                //   icon: PrimeIcons.ARROW_DOWN_RIGHT,
-                //   visible: permission.SETTINGS_PER_CREATE_PERMISSION,
-                //   badge: 'SETTINGS_PER_CREATE_PERMISSION',
-                //   command: _event => {
-                //     this.saveMode = 'INSERT';
-                //     this.nodeType = this.selectedItem.type;
-                //     this.clearForm();
-                //     this.createPermissionForm();
-                //   }
-                // },
+                {
+                    label: 'Create Permission',
+                    icon: i4.PrimeIcons.ARROW_DOWN_RIGHT,
+                    visible: permission.SETTINGS_PER_CREATE_PERMISSION,
+                    badge: 'SETTINGS_PER_CREATE_PERMISSION',
+                    command: function (_event) {
+                        _this.saveMode = 'INSERT';
+                        _this.nodeType = _this.selectedItem.type;
+                        _this.clearForm();
+                        _this.createPermissionForm();
+                    }
+                },
                 {
                     label: 'Delete',
                     icon: i4.PrimeIcons.TRASH,
                     visible: permission.SETTINGS_PER_DELETE,
                     badge: 'SETTINGS_PER_DELETE',
-                    command: function (_event) {
+                    command: function (event) {
                         _this.saveMode = 'DELETE';
                         _this.nodeType = _this.selectedItem.type;
-                        $('#DeletePermission').modal('show');
+                        // this.confirmationService.confirm({
+                        //   target: event.target as EventTarget,
+                        //   message: 'Are you sure that you want to delete?',
+                        //   icon: 'pi pi-exclamation-triangle',
+                        //   accept: () => {
+                        //     //confirm action
+                        $('#Deleteuser').modal('show');
+                        // this.deleteItem();
+                        //   },
+                        //   reject: () => {
+                        //     // This is intentional
+                        //   },
+                        // });
                     }
                 }
             ];
-        };
-        PermissionsComponent.prototype.createSubMenu = function (selectedItem) {
-            this.showParent = false;
-            this.pageForm.patchValue({
-                menutype: 'page',
-                parentid: selectedItem.id,
-                name: '',
-                icon: '',
-                pagetype: '',
-                route: ''
-            });
-        };
-        PermissionsComponent.prototype.createSubParent = function (selectedItem) {
-            this.showParent = true;
-            this.selectParent();
-            this.pageForm.patchValue({
-                menutype: 'parent',
-                parentid: selectedItem.id,
-                name: '',
-                icon: '',
-                pagetype: '',
-                route: ''
-            });
-        };
-        PermissionsComponent.prototype.selectParent = function () {
-            this.allPages = this.parentPages.filter(function (a) { return (a === null || a === void 0 ? void 0 : a.menutype) == 'parent'; });
-        };
-        PermissionsComponent.prototype.selectPage = function () {
-            this.allPages = this.parentPages.filter(function (a) { return (a === null || a === void 0 ? void 0 : a.menutype) == 'page'; });
-        };
-        PermissionsComponent.prototype.loadIcons = function () {
-            this.icons = AppIcons.preloadedIcons;
-        };
-        PermissionsComponent.prototype.checkIcons = function (event) {
-            var isSettingsIconExists = this.icons.some(function (icon) { return icon.icon === event.value; });
-            if (isSettingsIconExists) {
-                this.showIcon = event.value;
-            }
-            else {
-                this.showIcon = 'error';
-            }
-        };
-        PermissionsComponent.prototype.deletePermission = function () {
-            $('#DeletePermission').modal('hide');
-            this.deleteItem();
         };
         PermissionsComponent.prototype.setPagesList = function () {
             var _this = this;
             this.permissionService.getOrganizationPage(this.orgId).subscribe(function (res) {
                 var data = res['data'];
                 if (data && (data === null || data === void 0 ? void 0 : data.length)) {
-                    _this.pagesList = data === null || data === void 0 ? void 0 : data.filter(function (a) { var _a; return (_a = a.activeVersion) === null || _a === void 0 ? void 0 : _a.gridconfig; }).map(function (x) {
+                    var filterPagesList = data === null || data === void 0 ? void 0 : data.filter(function (a) { var _a; return (_a = a.activeVersion) === null || _a === void 0 ? void 0 : _a.gridconfig; }).map(function (x) {
                         x.activeVersion.pageid = x.activeVersion.pageid.toString();
                         return {
                             id: x.activeVersion.pageid,
@@ -1512,58 +1708,21 @@
                             value: x.activeVersion.pagename
                         };
                     });
+                    _this.pagesList = filterPagesList.sort(function (a, b) { return a.pagename.localeCompare(b.pagename); });
+                    _this.duplicateDynamicPagesList = _this.pagesList;
                 }
             });
-        };
-        PermissionsComponent.prototype.setPlatformPageList = function () {
-            var _this = this;
-            this.permissionService.getPlatformPage().subscribe(function (res) {
-                var data = res['data'];
-                if (data && (data === null || data === void 0 ? void 0 : data.length)) {
-                    _this.platformpagesList = data;
-                }
-            });
-        };
-        PermissionsComponent.prototype.setMenuType = function () {
-            this.menutype = [
-                { name: 'Parent', value: 'parent' },
-                { name: 'Page', value: 'page' }
-            ];
-        };
-        PermissionsComponent.prototype.setPageType = function () {
-            this.pagetype = [
-                { name: 'Platform', value: 'platform' },
-                { name: 'Dynamic', value: 'dynamic' }
-            ];
-        };
-        PermissionsComponent.prototype.onPageTypeChange = function (event) {
-            if (event.value == 'dynamic') {
-                this.showDynamic = true;
-            }
-            else {
-                this.showDynamic = false;
-            }
-        };
-        PermissionsComponent.prototype.onMenuTypeChange = function (event) {
-            if (event.value == 'parent') {
-                this.showParent = true;
-            }
-            else {
-                this.showParent = false;
-            }
         };
         PermissionsComponent.prototype.loadTree = function () {
             var _this = this;
             this.permissionService.getAllPageTree(this.environment.applicationid).subscribe(function (items) {
-                _this.pages = items;
-                _this.parentPages = items;
+                _this.pages = items.sort(function (a, b) { return a.name.localeCompare(b.name); });
+                _this.filteredParentPages = _this.pages;
                 _this.duplicatepages = items;
-                // this.allPages = items;
-                _this.selectParent();
                 if (_this.pages.length) {
-                    _this.selectedItem = _this.pages[0];
+                    //this.selectedItem = this.pages[0];
                 }
-                _this.treeData = _this.buildTree(_this.pages, null);
+                _this.treeData = _this.buildTree(_this.pages, null, false);
             });
         };
         PermissionsComponent.prototype.cancel = function () {
@@ -1574,32 +1733,22 @@
         //   // this.deletedId = id;
         //   $('#Deleteuser').modal('show');
         // }
-        PermissionsComponent.prototype.buildTree = function (pages, parentid) {
-            var _this = this;
-            var tree = [];
-            pages
-                .filter(function (page) { return page.parentid === parentid; })
-                .forEach(function (page) {
-                var children = _this.buildTree(pages, page.id);
-                if (children.length > 0) {
-                    page.children = children;
-                }
-                else {
-                    page.children = [];
-                }
-                tree.push(page);
-            });
-            return tree;
-        };
         PermissionsComponent.prototype.deleteItem = function () {
             var _this = this;
             this.saveMode = 'UPDATE';
             if (this.selectedItem.type === 'page') {
                 // $('#Deleteuser').modal('show');
                 this.permissionService.deletePage(this.selectedItem.id).subscribe(function (_item) {
+                    var _a, _b, _c, _d;
                     _this.cancel();
+                    if ((_b = (_a = _this.selectedItem) === null || _a === void 0 ? void 0 : _a.children) === null || _b === void 0 ? void 0 : _b.length) {
+                        (_d = (_c = _this.selectedItem) === null || _c === void 0 ? void 0 : _c.children) === null || _d === void 0 ? void 0 : _d.map(function (c) {
+                            _this.permissionService.deletePage(c.id).subscribe(function (_item) { return console.log(''); });
+                        });
+                    }
                     $('#Deleteuser').modal('hide');
-                    _this.alertService.success('Page deleted successfully.');
+                    _this.resetMenu(true);
+                    _this.alertService.success('Menu deleted successfully.');
                     _this.loadTree();
                 });
             }
@@ -1612,6 +1761,11 @@
                     _this.loadTree();
                 });
             }
+        };
+        PermissionsComponent.prototype.deletePermission = function () {
+            this.saveMode = 'DELETE';
+            this.nodeType = this.selectedItem.type;
+            $('#Deleteuser').modal('show');
         };
         PermissionsComponent.prototype.requiredIfValidator = function (predicate) {
             return function (formControl) {
@@ -1687,13 +1841,25 @@
             var value = event.target.value.toLowerCase();
             this.pages = this.duplicatepages.filter(function (a) { var _a; return (_a = a === null || a === void 0 ? void 0 : a.name) === null || _a === void 0 ? void 0 : _a.toLowerCase().startsWith(value); });
         };
-        PermissionsComponent.prototype.onModelPermission = function (value) {
-            this.modelPermissiomName = value.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+        PermissionsComponent.prototype.onPageNameInput = function (event, name) {
+            var input = event.target;
+            var startPosition = input.selectionStart;
+            var endPosition = input.selectionEnd;
+            var pagenameControl = this.pageForm.get(name);
+            if (pagenameControl.value) {
+                var newValue = pagenameControl.value
+                    .split(' ')
+                    .map(function (word) { return word.charAt(0).toUpperCase() + word.slice(1); })
+                    .join(' ');
+                pagenameControl.patchValue(newValue, { emitEvent: false });
+                // Restore cursor position
+                input.setSelectionRange(startPosition, endPosition);
+            }
         };
         return PermissionsComponent;
     }());
     PermissionsComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PermissionsComponent, deps: [{ token: i0__namespace.Injector }, { token: RbacService }, { token: i2__namespace.FormBuilder }, { token: AlertService }, { token: i4__namespace.ConfirmationService }, { token: ShareDataService }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    PermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"adjustpadding\">\r\n  <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n    (click)=\"clearForm()\">\r\n    Add Menu\r\n  </button>\r\n</div>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"form-group bgiconsearch\">\r\n            <input\r\n              class=\"form-control\"\r\n              placeholder=\"Search by Menu Name\"\r\n              type=\"text\"\r\n              (keyup)=\"searchPermissionList($event)\" \r\n              pInputText />\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"masteracess\">\r\n            <!-- <p-tree [value]=\"treeData\">\r\n              <ng-template let-node pTemplate=\"default\">\r\n                {{node.name}}\r\n              </ng-template>\r\n            </p-tree> -->\r\n            <!-- <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu> -->\r\n            <p-tree [value]=\"treeData\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n                    (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n                    (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\">\r\n              <ng-template let-node pTemplate=\"default\">\r\n                <span *ngIf=\"node.menutype === 'parent'\">\r\n                  <span class=\"ui-tree-toggler ui-clickable\" *ngIf=\"node.children && node.children.length > 0\"\r\n                        (click)=\"onNodeExpandClick($event, node)\"></span>\r\n                </span>            \r\n                {{node.name}}\r\n                <p-contextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n                <ng-container *ngIf=\"node.children && node.children.length > 0\">\r\n                  <ng-container *ngTemplateOutlet=\"recursiveTree; context:{ $implicit: node.children }\"></ng-container>\r\n                </ng-container>\r\n              </ng-template>\r\n              <ng-template #recursiveTree let-nodes>\r\n                <ul>\r\n                  <li *ngFor=\"let child of nodes\">\r\n                    <ng-container *ngTemplateOutlet=\"recursiveTree; context:{ $implicit: child.children }\"></ng-container>\r\n                  </li>\r\n                </ul>\r\n              </ng-template>\r\n              <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu>\r\n            </p-tree>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Add Menu</span>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" pattern=\"[a-zA-Z0-9]*([a-zA-Z0-9]+\\s*)*\" [(ngModel)]=\"modelPermissiomName\" \r\n              (ngModelChange)=\"onModelPermission($event)\"  pInputText />\r\n            <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n                !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['name'].invalid &&\r\n            pageForm.controls['name'].hasError('required') &&\r\n            (pageForm.controls['name'].dirty || pageForm.controls['name'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['name'].hasError('required')\" class=\"p-error block\">Name is\r\n                required</small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"icon\" class=\"referral-form-labels\">\r\n              Icon\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <div class=\"d-flex\">\r\n              <!-- <input id=\"icon\" type=\"text\" formControlName=\"icon\" placeholder=\"Enter Icon Name\"\r\n                aria-describedby=\"cdescription-icon\" pInputText /> -->\r\n              <p-dropdown [options]=\"icons\" formControlName=\"icon\" fieldKey=\"SETTINGS_PER_ROUTE\" (onChange)=\"checkIcons($event)\"\r\n                placeholder=\"Enter/Select Icon\" optionLabel=\"icon\" optionValue=\"icon\" [showClear]=\"true\" [editable]=\"true\">\r\n              </p-dropdown>\r\n              <span class=\"material-symbols-outlined userempty\">\r\n                {{ showIcon }}\r\n              </span>\r\n            </div>\r\n            <div *ngIf=\" pageForm.controls['icon'].invalid &&\r\n              (pageForm.controls['icon'].dirty || pageForm.controls['icon'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['icon'].invalid\" class=\"p-error block\">Icon is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Menu Type\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"menutype\" formControlName=\"menutype\" fieldKey=\"SETTINGS_PER_NAME\" (onChange)=\"onMenuTypeChange($event)\"\r\n              placeholder=\"Select Menu Type\" optionLabel=\"name\" optionValue=\"value\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"pageForm.controls['menutype'].invalid &&\r\n                (pageForm.controls['menutype'].dirty || pageForm.controls['menutype'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['menutype'].invalid\" class=\"p-error block\">Menu type is required </small>\r\n            </div>\r\n          </div>\r\n          <!-- <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Route\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"croute\" type=\"text\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Enter Route\" aria-describedby=\"croute\" pattern=\"[a-zA-Z0-9\\/\\\\-]*\" pInputText />\r\n              <div *ngIf=\"\r\n              pageForm.controls['route'].invalid &&\r\n                pageForm.controls['route'].dirty &&\r\n              !pageForm.controls['route'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['route'].errors && pageForm.controls['route'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div>\r\n            <div *ngIf=\"\r\n            pageForm.controls['route'].invalid &&\r\n            pageForm.controls['route'].hasError('required') &&\r\n            (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\">\r\n              <small *ngIf=\"pageForm.controls['route'].hasError('required')\" class=\"p-error block\">Route is\r\n                required</small>\r\n            </div>\r\n          </div> -->\r\n          <!-- <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Route is required </small>\r\n            </div>\r\n          </div> -->\r\n          <!-- <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div> -->\r\n          <!-- <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div> -->\r\n        </div>\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent</label>\r\n            <p-dropdown [options]=\"allPages\" placeholder=\"Select Parent\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showParent\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Page Type\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagetype\" formControlName=\"pagetype\" fieldKey=\"SETTINGS_PER_NAME\"\r\n              placeholder=\"Select Page Type\" optionLabel=\"name\" optionValue=\"value\" (onChange)=\"onPageTypeChange($event)\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['pagetype'].invalid &&\r\n                (pageForm.controls['pagetype'].dirty || pageForm.controls['pagetype'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['pagetype'].invalid\" class=\"p-error block\">Page type is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showDynamic && !showParent\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"pagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" optionLabel=\"value\" optionValue=\"id\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Dynamic page is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showDynamic && !showParent\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Platform Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"platformpagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Platform Page\" optionLabel=\"pagename\" optionValue=\"pageurl\" [showClear]=\"true\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"\r\n                pageForm.controls['route'].invalid &&\r\n                (pageForm.controls['route'].dirty || pageForm.controls['route'].touched)\r\n              \">\r\n              <small *ngIf=\"pageForm.controls['route'].invalid\" class=\"p-error block\">Platform page is required </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Menu' : 'Add Menu' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <!-- <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block\">Permission Type\r\n                is required\r\n              </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block\">Key is required </small>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <small *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block\">Description is\r\n                required\r\n              </small>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card> -->\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"modal\" id=\"DeletePermission\" tabindex=\"-1\" role=\"dialog\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Delete Permission</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        Are you sure you want to delete the Permission?\r\n        <div class=\"clearfix\"></div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\"\r\n            (click)=\"deletePermission()\">\r\n            Delete\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" data-dismiss=\"modal\">\r\n            Cancel\r\n          </button>\r\n        </div>\r\n        <div class=\"clearfix\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}.adjustpadding{padding-top:10px;padding-bottom:40px}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i8__namespace.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i9__namespace.ContextMenu, selector: "p-contextMenu", inputs: ["model", "global", "target", "style", "styleClass", "appendTo", "autoZIndex", "baseZIndex", "triggerEvent"], outputs: ["onShow", "onHide"] }, { type: i10__namespace.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i11__namespace.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }], directives: [{ type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i13__namespace.InputText, selector: "[pInputText]" }, { type: i4__namespace.PrimeTemplate, selector: "[pTemplate]", inputs: ["type", "pTemplate"] }, { type: i14__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i14__namespace.NgTemplateOutlet, selector: "[ngTemplateOutlet]", inputs: ["ngTemplateOutletContext", "ngTemplateOutlet"] }, { type: i14__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i2__namespace.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i2__namespace.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i2__namespace.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: i2__namespace.PatternValidator, selector: "[pattern][formControlName],[pattern][formControl],[pattern][ngModel]", inputs: ["pattern"] }] });
+    PermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: PermissionsComponent, selector: "permissions", ngImport: i0__namespace, template: "<app-alert></app-alert>\r\n<div class=\"permission\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4 col-md-6 col-12\">\r\n      <div class=\"clearfix\"></div>\r\n      <div class=\"tab-content py-2\">\r\n        <div class=\"tab-pane fade show active\">\r\n          <div class=\"form-group bgiconsearch d-flex\">\r\n            <!-- <input class=\"form-control\" placeholder=\"Search by Menu Name\" type=\"text\" [formControl]=\"search\"\r\n              pInputText pClearButton/> -->\r\n            <span class=\"p-input-icon-right w-100\">\r\n              <i class=\"pi pi-times-circle\" (click)=\"clearsearch()\"></i>\r\n              <input class=\"form-control\" placeholder=\"Search by Menu Name\" type=\"text\" [formControl]=\"search\"\r\n                pInputText />\r\n            </span>\r\n            <button class=\"btn btn-primary btncommon ml-2\" (click)=\"resetMenu(true)\">Add</button>\r\n          </div>\r\n          <div class=\"clearfix\"></div>\r\n          <div class=\"masteracess\">\r\n            <!-- <p-tree [value]=\"pages\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\" [contextMenu]=\"treeContextMenu\"></p-tree>\r\n            <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu> -->\r\n            <!-- <p-confirmPopup styleClass=\"delete-popup\"></p-confirmPopup> -->\r\n            <p-tree [value]=\"treeData\" selectionMode=\"single\" [(selection)]=\"selectedItem\"\r\n              (onNodeSelect)=\"nodeSelect($event, true)\" (onNodeContextMenuSelect)=\"onNodeContextMenuSelect($event)\"\r\n              (onNodeExpand)=\"nodeExpand($event)\">\r\n              <ng-template let-node pTemplate=\"default\">\r\n                <span *ngIf=\"node.menutype === 'parent'\">\r\n                  <span class=\"ui-tree-toggler ui-clickable\" *ngIf=\"node.children && node.children.length > 0\"\r\n                    (click)=\"onNodeExpandClick($event, node)\"></span>\r\n                </span>\r\n                {{node.name}}\r\n                <!-- <p-contextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu> -->\r\n                <ng-container *ngIf=\"node.children && node.children.length > 0\">\r\n                  <ng-container *ngTemplateOutlet=\"recursiveTree; context:{ $implicit: node.children }\"></ng-container>\r\n                </ng-container>\r\n              </ng-template>\r\n              <ng-template #recursiveTree let-nodes>\r\n                <ul>\r\n                  <li *ngFor=\"let child of nodes\">\r\n                    <ng-container\r\n                      *ngTemplateOutlet=\"recursiveTree; context:{ $implicit: child.children }\"></ng-container>\r\n                  </li>\r\n                </ul>\r\n              </ng-template>\r\n              <!-- <p-contextMenu #treeContextMenu [model]=\"menuItems\" appendTo=\"body\"></p-contextMenu> -->\r\n            </p-tree>\r\n            <div class=\"modal\" id=\"Deleteuser\" tabindex=\"-1\" role=\"dialog\">\r\n              <div class=\"modal-dialog\" role=\"document\">\r\n                <div class=\"modal-content\">\r\n                  <div class=\"modal-header\">\r\n                    <h5 class=\"modal-title\">Delete Menu</h5>\r\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                      <span aria-hidden=\"true\">&times;</span>\r\n                    </button>\r\n                  </div>\r\n                  <div class=\"modal-body\">\r\n                    Are you sure you want to delete the Menu?\r\n                    <div class=\"clearfix\"></div>\r\n                    <div class=\"mt-2\">\r\n                      <button class=\"pull-right mb-2 btn btn-primary btncommon delete\" data-dismiss=\"modal\"\r\n                        (click)=\"deleteItem()\">\r\n                        Delete\r\n                      </button>\r\n                      <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\"\r\n                        data-dismiss=\"modal\">Cancel</button>\r\n                    </div>\r\n                    <div class=\"clearfix\"></div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-8 col-md-6 col-12 master-right mt-2\">\r\n      <p-card *ngIf=\"nodeType === 'page'\" id=\"pageForm\" class=\"rbac-card\" [formGroup]=\"pageForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">{{saveMode === 'UPDATE' ? 'Update Menu' : 'Add Menu'}}</span>\r\n        </div>\r\n        <div class=\"mb-3 mt-1\">\r\n          <mat-radio-group formControlName=\"pageTypeMenu\">\r\n            <mat-radio-button class=\"mr-2\" value=\"platform\"\r\n              (click)=\"selectType('platform', $event)\">Platform</mat-radio-button>\r\n            <mat-radio-button value=\"dynamic\" (click)=\"selectType('dynamic', $event)\">Dynamic</mat-radio-button>\r\n          </mat-radio-group>\r\n        </div>\r\n        <input id=\"cid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"capplicationid\" type=\"hidden\" formControlName=\"applicationid\" />\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"cname\" class=\"referral-form-labels\">Name\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"cname\" type=\"text\" formControlName=\"name\" fieldKey=\"SETTINGS_PER_NAME\" placeholder=\"Enter Name\"\r\n              aria-describedby=\"cname\" (keyup)=\"onPageNameInput($event, 'name')\"\r\n              (input)=\"onInput($event, 'name', 'Name', true)\" pInputText />\r\n              <div *ngIf=\"validationErrors['Name']\" class=\"p-error block mt-1\">{{validationErrors['Name']}}</div>\r\n             <!-- pattern=\"[a-zA-Z0-9]*([a-zA-Z0-9]+\\s*)*\" <div *ngIf=\"\r\n              pageForm.controls['name'].invalid &&\r\n                pageForm.controls['name'].dirty &&\r\n              !pageForm.controls['name'].hasError('required')\">\r\n              <small *ngIf=\"pageForm.controls['name'].errors && pageForm.controls['name'].invalid\"\r\n                class=\"p-error block\">Invalid input data</small>\r\n            </div> -->\r\n            <div *ngIf=\"!validationErrors['Name'] && formValidate['name'].errors && formSubmit\">\r\n              <div *ngIf=\"formValidate['name'].invalid\" class=\"p-error block mt-1\">Name is\r\n                required</div>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"!showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Platform Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <!-- <p-dropdown [options]=\"platformPagesList\" [filter]=\"true\" formControlName=\"route\"\r\n              fieldKey=\"SETTINGS_PER_ROUTE\" placeholder=\"Select Platform Page\" optionLabel=\"pagename\"\r\n              optionValue=\"pageurl\" [showClear]=\"true\">\r\n            </p-dropdown> -->\r\n            <p-dropdown [options]=\"duplicatePlatformPagesList\" placeholder=\"Select Platform Page\"\r\n            formControlName=\"route\" [resetFilterOnHide]=\"true\" [filter]=\"true\" [showClear]=\"true\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n            optionLabel=\"pagename\" optionValue=\"pageurl\" inputId=\"platformPage\"\r\n            (keyup)=\"searchPlatformPageList($event)\" (onHide)=\"resetPlatformPageList()\">\r\n            <ng-template let-item pTemplate=\"selectedItem\">\r\n              <div pTooltip=\"{{item?.pagename}}\" tooltipPosition=\"top\" class=\"text-truncate\"> {{ item?.pagename }}\r\n              </div>\r\n            </ng-template>\r\n            <ng-template let-object pTemplate=\"item\">\r\n              {{ object.pagename }}\r\n            </ng-template>\r\n            </p-dropdown>\r\n            <div *ngIf=\"formValidate['route'].errors && formSubmit && !showLinkPage\">\r\n              <div *ngIf=\"formValidate['route'].invalid\" class=\"p-error block mt-1\">Platform Page is required</div>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\" *ngIf=\"showLinkPage\">\r\n            <label for=\"croute\" class=\"referral-form-labels\">\r\n              Dynamic Pages\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"duplicateDynamicPagesList\" formControlName=\"route\" fieldKey=\"SETTINGS_PER_ROUTE\"\r\n              placeholder=\"Select Dynamic Page\" (keyup)=\"searchDynamicPageList($event)\" (onHide)=\"resetDynamicPageList()\" optionLabel=\"value\"\r\n              optionValue=\"id\" [filter]=\"true\" [resetFilterOnHide]=\"true\" [showClear]=\"true\">\r\n              <ng-template let-item pTemplate=\"selectedItem\">\r\n                <div pTooltip=\"{{item?.value}}\" tooltipPosition=\"top\" class=\"text-truncate\"> {{ item?.value }}\r\n                </div>\r\n              </ng-template>\r\n              <ng-template let-object pTemplate=\"item\">\r\n                {{ object.value }}\r\n              </ng-template>\r\n            </p-dropdown>\r\n            <div *ngIf=\"formValidate['route'].errors && formSubmit && showLinkPage\">\r\n              <div *ngIf=\"formValidate['route'].invalid\" class=\"p-error block mt-1\">Dynamic Page is required </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels\">Parent Page </label>\r\n            <p-dropdown [options]=\"pages\" placeholder=\"Select Parent Page\" formControlName=\"parentid\" optionLabel=\"name\"\r\n              optionValue=\"id\" (onHide)=\"resetParentPageList()\" [showClear]=\"true\" [resetFilterOnHide]=\"true\" [filter]=\"true\" (keyup)=\"searchPermissionList($event)\"\r\n              fieldKey=\"SETTINGS_PER_PARENT_PAGE\">\r\n              <ng-template let-item pTemplate=\"selectedItem\">\r\n                <div pTooltip=\"{{item?.name}}\" tooltipPosition=\"top\" class=\"text-truncate\"> {{ item?.name }}</div>\r\n              </ng-template>\r\n              <ng-template let-object pTemplate=\"item\">\r\n                {{ object.name }}\r\n              </ng-template>\r\n            </p-dropdown>\r\n          </div>\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"corder\" class=\"referral-form-labels d-none d-lg-inline-block\">&#160;</label>\r\n            <div>\r\n              <p-checkbox st inputId=\"binary\" [binary]=\"true\" fieldKey=\"SETTINGS_PER_MENU\" formControlName=\"ismenu\"\r\n                label=\"Menu\"></p-checkbox>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"col-lg-3 col-md-12 col-12 mb-3\">\r\n            <label for=\"icon\" class=\"referral-form-labels\">\r\n              Icon\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <p-dropdown [options]=\"dublicateIconList\" styleClass=\"icon-dropdown\" formControlName=\"icon\" [filter]=\"true\"\r\n              optionLabel=\"label\" optionValue=\"value\" [resetFilterOnHide]=\"true\" [showClear]=\"iconList && iconList.length\"\r\n              placeholder=\"Select Icon\" (keyup)=\"searchIconList($event)\" (onHide)=\"resetIconList()\" (onChange)=\"getSelectedLabel($event.value)\">\r\n              <ng-template pTemplate=\"selectedItem\">\r\n                <div pTooltip=\"{{selectedIconLabel}}\" tooltipPosition=\"top\"\r\n                  class=\"d-flex flex-row align-items-center gap-2\" *ngIf=\"pageForm.controls['icon'].value\">\r\n                  <span class=\"material-symbols-outlined userempty ml-0\">\r\n                    {{ pageForm.controls['icon'].value }}\r\n                  </span>\r\n                  <div class=\"text-truncate\">\r\n                    {{ selectedIconLabel }}\r\n                  </div>\r\n                </div>\r\n              </ng-template>\r\n              <ng-template let-icon pTemplate=\"item\">\r\n                <div class=\"d-flex flex-row align-items-start gap-2\">\r\n                  <span class=\"material-symbols-outlined userempty ml-0\">\r\n                    {{ icon.value }}\r\n                  </span>\r\n                  <div>{{ icon.label }}</div>\r\n                </div>\r\n              </ng-template>\r\n            </p-dropdown>\r\n            <div *ngIf=\"formValidate['icon'].errors && formSubmit\">\r\n              <div *ngIf=\"formValidate['icon'].invalid\" class=\"p-error block mt-1\">Icon is required </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"mt-2\">\r\n          <button class=\"pull-right mb-2 btn btn-primary btncommon\" fieldKey=\"SETTINGS_PER_ADD_PAGE\"\r\n            (click)=\"savePage()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Menu' : 'Add Menu' }}\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\"\r\n            class=\"pull-right mb-2 mr-2 btn bg-white text-primary border border-primary btncancel\"\r\n            (click)=\"resetForm()\">\r\n            Cancel\r\n          </button>\r\n          <button fieldKey=\"SETTINGS_PER_CANCEL\" class=\"pull-right mb-2 btn btn-danger\" (click)=\"deletePermission()\"\r\n            *ngIf=\"showDeleteBtn && showLinkPage && saveMode === 'UPDATE'\">\r\n            Delete\r\n          </button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n\r\n      <p-card *ngIf=\"nodeType === 'permission'\" id=\"permissionForm\" class=\"rbac-card\" [formGroup]=\"permissionForm\"\r\n        [style]=\"{ width: '100%', 'margin-bottom': '2em' }\">\r\n        <div class=\"strip_head toggleleft\">\r\n          <span class=\"report_head font-weight-bold\">Permission</span>\r\n        </div>\r\n\r\n        <input id=\"lid\" type=\"hidden\" formControlName=\"id\" />\r\n        <input id=\"lpermissionpageid\" type=\"hidden\" formControlName=\"permissiontypeid\" />\r\n        <input id=\"lparentid\" type=\"hidden\" formControlName=\"parentid\" />\r\n        <input id=\"lpageid\" type=\"hidden\" formControlName=\"pageid\" />\r\n\r\n        <div class=\"p-fluid p-formgrid p-grid\">\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lpermissiontype\" class=\"referral-form-labels\">Permission Type\r\n              <span class=\"requiredfield text-danger\">*</span></label>\r\n            <p-dropdown id=\"lpermissiontype\" [options]=\"permissionTypes\" placeholder=\"Select a Permission Type\"\r\n              formControlName=\"permissiontypeid\" optionLabel=\"name\" optionValue=\"id\">\r\n            </p-dropdown>\r\n            <div *ngIf=\"permissionForm.controls['permissiontypeid'].errors\">\r\n              <div *ngIf=\"permissionForm.controls['permissiontypeid'].invalid\" class=\"p-error block mt-1\">Permission Type\r\n                is required\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lkey\" class=\"referral-form-labels\">Key\r\n              <span class=\"requiredfield text-danger\">*</span>\r\n            </label>\r\n            <input id=\"lkey\" type=\"text\" placeholder=\"Enter Key\" formControlName=\"key\" aria-describedby=\"lkey-help\"\r\n              pInputText />\r\n            <div *ngIf=\"permissionForm.controls['key'].errors\">\r\n              <div *ngIf=\"permissionForm.controls['key'].invalid\" class=\"p-error block mt-1\">Key is required </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"p-field p-col\">\r\n            <label for=\"lvalue\" class=\"referral-form-labels\">Description <span\r\n                class=\"requiredfield text-danger\">*</span> </label>\r\n            <input id=\"lvalue\" type=\"text\" placeholder=\"Enter Value\" formControlName=\"description\"\r\n              aria-describedby=\"pname-help\" pInputText />\r\n            <div *ngIf=\"permissionForm.controls['description'].errors\">\r\n              <div *ngIf=\"permissionForm.controls['description'].invalid\" class=\"p-error block mt-1\">Description is\r\n                required\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <button type=\"submit\" class=\"pull-right mb-2 btn btn-primary btncommon\" (click)=\"savePermission()\">\r\n            {{ saveMode === 'UPDATE' ? 'Update Permission' : 'Add Permission' }}\r\n          </button>\r\n          <button class=\"pull-right mb-2 mr-2 btn bg-white text-primary btncancel\" (click)=\"clearForm()\">Cancel</button>\r\n          <br />\r\n          <br />\r\n        </div>\r\n      </p-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n", styles: [".head-div{padding-top:9px;padding-left:7px}.bgiconsearch{margin-bottom:5px;padding-bottom:0;font-size:13px}.masteracess{border:solid 1px var(--table-border);border-radius:2px;padding:5px 0;overflow-y:auto;background:var(--bg-light)}.masterempty{max-width:none;border-radius:50%;height:40px;width:40px}.row.masterdata{margin:0;border-bottom:solid 1px var(--table-border);padding:5px 0;cursor:pointer}.overflow_txt{overflow:hidden;text-overflow:ellipsis}span.namemaster{font-size:13px;color:var(--text-dark)}.masterid,span.emailmaster{font-size:13px;color:#9b9b9b}span.deletemaster{position:absolute;top:0px;right:15px;z-index:9;width:20px;float:right;cursor:pointer}span.deletemaster img{width:12px}.activate{position:absolute;margin-top:-46px;margin-left:44rem}.toggleleft{font-size:14px;font-weight:600;display:block;margin-top:-12px;padding-bottom:13px}.report_button{margin-left:12px}:host ::ng-deep .ui-tree.permission-tree{width:100%}.userempty{max-width:none;padding:8px;border-radius:10%;height:36px;width:35px;color:var(--text-dark);margin-left:10px;display:flex;align-items:center}.fileupload .profile{color:#fff}.rbac-card .p-fluid .p-inputtext{padding:8px}.rbac-card .warning{margin-left:10px}.pi-trash{color:red;font-size:12px}@media screen and (max-width: 767px){.masteracess{max-height:400px}}@media screen and (min-width: 990px){.masteracess{height:calc(100vh - 188px)}}@media screen and (max-width: 990px){:host ::ng-deep .selected-list .c-list{width:calc(100% - 35px)!important}.pageLevelAccessTable{width:100%;overflow:auto}.pageLevelAccessTable .table{margin-bottom:60px}}:host ::ng-deep .icon-dropdown li.p-dropdown-item{padding:.5rem 15px!important}:host ::ng-deep .icon-dropdown li.p-dropdown-item.p-highlight .userempty,:host ::ng-deep .icon-dropdown li.p-dropdown-item:hover .userempty,:host ::ng-deep .icon-dropdown li.p-dropdown-item:focus .userempty{color:#fff}:host ::ng-deep .icon-dropdown .userempty{height:inherit;padding:0;justify-content:start;font-size:19px;width:25px}\n"], components: [{ type: AlertComponent, selector: "app-alert" }, { type: i8__namespace.Tree, selector: "p-tree", inputs: ["value", "selectionMode", "selection", "style", "styleClass", "contextMenu", "layout", "draggableScope", "droppableScope", "draggableNodes", "droppableNodes", "metaKeySelection", "propagateSelectionUp", "propagateSelectionDown", "loading", "loadingIcon", "emptyMessage", "ariaLabel", "togglerAriaLabel", "ariaLabelledBy", "validateDrop", "filter", "filterBy", "filterMode", "filterPlaceholder", "filteredNodes", "filterLocale", "scrollHeight", "virtualScroll", "virtualNodeHeight", "minBufferPx", "maxBufferPx", "indentation", "trackBy"], outputs: ["selectionChange", "onNodeSelect", "onNodeUnselect", "onNodeExpand", "onNodeCollapse", "onNodeContextMenuSelect", "onNodeDrop", "onFilter"] }, { type: i9__namespace.Card, selector: "p-card", inputs: ["header", "subheader", "style", "styleClass"] }, { type: i10__namespace.MatRadioButton, selector: "mat-radio-button", inputs: ["disableRipple", "tabIndex"], exportAs: ["matRadioButton"] }, { type: i11__namespace.Dropdown, selector: "p-dropdown", inputs: ["scrollHeight", "filter", "name", "style", "panelStyle", "styleClass", "panelStyleClass", "readonly", "required", "editable", "appendTo", "tabindex", "placeholder", "filterPlaceholder", "filterLocale", "inputId", "selectId", "dataKey", "filterBy", "autofocus", "resetFilterOnHide", "dropdownIcon", "optionLabel", "optionValue", "optionDisabled", "optionGroupLabel", "optionGroupChildren", "autoDisplayFirst", "group", "showClear", "emptyFilterMessage", "emptyMessage", "virtualScroll", "itemSize", "autoZIndex", "baseZIndex", "showTransitionOptions", "hideTransitionOptions", "ariaFilterLabel", "ariaLabel", "ariaLabelledBy", "filterMatchMode", "maxlength", "tooltip", "tooltipPosition", "tooltipPositionStyle", "tooltipStyleClass", "autofocusFilter", "disabled", "options", "filterValue"], outputs: ["onChange", "onFilter", "onFocus", "onBlur", "onClick", "onShow", "onHide", "onClear"] }, { type: i12__namespace.Checkbox, selector: "p-checkbox", inputs: ["value", "name", "disabled", "binary", "label", "ariaLabelledBy", "ariaLabel", "tabindex", "inputId", "style", "styleClass", "labelStyleClass", "formControl", "checkboxIcon", "readonly", "required", "trueValue", "falseValue"], outputs: ["onChange"] }], directives: [{ type: i2__namespace.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { type: i13__namespace.InputText, selector: "[pInputText]" }, { type: i2__namespace.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { type: i2__namespace.FormControlDirective, selector: "[formControl]", inputs: ["disabled", "formControl", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }, { type: i4__namespace.PrimeTemplate, selector: "[pTemplate]", inputs: ["type", "pTemplate"] }, { type: i14__namespace.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { type: i14__namespace.NgTemplateOutlet, selector: "[ngTemplateOutlet]", inputs: ["ngTemplateOutletContext", "ngTemplateOutlet"] }, { type: i14__namespace.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i2__namespace.NgControlStatusGroup, selector: "[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]" }, { type: i2__namespace.FormGroupDirective, selector: "[formGroup]", inputs: ["formGroup"], outputs: ["ngSubmit"], exportAs: ["ngForm"] }, { type: i10__namespace.MatRadioGroup, selector: "mat-radio-group", exportAs: ["matRadioGroup"] }, { type: i2__namespace.FormControlName, selector: "[formControlName]", inputs: ["disabled", "formControlName", "ngModel"], outputs: ["ngModelChange"] }, { type: PermissionDirective, selector: "[fieldKey]", inputs: ["fieldKey"] }, { type: i16__namespace.Tooltip, selector: "[pTooltip]", inputs: ["tooltipPosition", "tooltipEvent", "appendTo", "positionStyle", "tooltipStyleClass", "tooltipZIndex", "escape", "showDelay", "hideDelay", "life", "positionTop", "positionLeft", "pTooltip", "tooltipDisabled", "tooltipOptions"] }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PermissionsComponent, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1717,12 +1883,13 @@
                 _this._storeservice.setData('RBACORG', _this.RBACORG);
                 _this.permissionStore.setStore(_this.PERMISSION);
                 _this._storeservice.setData('HTTPSERVICE', val.httpService);
+                _this._storeservice.setData('INPUTVALIDATIONMETHOD', _this.INPUTVALIDATIONMETHOD);
             });
         };
         return RbacPermissionsComponent;
     }());
     RbacPermissionsComponent.ɵfac = i0__namespace.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsComponent, deps: [{ token: PermissionStore }, { token: DataStoreService }], target: i0__namespace.ɵɵFactoryTarget.Component });
-    RbacPermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent", COMMONSERVICE: "COMMONSERVICE" }, ngImport: i0__namespace, template: "\n      <permissions></permissions>\n  ", isInline: true, components: [{ type: PermissionsComponent, selector: "permissions" }] });
+    RbacPermissionsComponent.ɵcmp = i0__namespace.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "12.2.17", type: RbacPermissionsComponent, selector: "rbac-permissions", inputs: { RBACORG: "RBACORG", PERMISSION: "PERMISSION", permissionEvent: "permissionEvent", COMMONSERVICE: "COMMONSERVICE", INPUTVALIDATIONMETHOD: "INPUTVALIDATIONMETHOD" }, ngImport: i0__namespace, template: "\n      <permissions></permissions>\n  ", isInline: true, components: [{ type: PermissionsComponent, selector: "permissions" }] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: RbacPermissionsComponent, decorators: [{
                 type: i0.Component,
                 args: [{
@@ -1737,6 +1904,8 @@
                 }], permissionEvent: [{
                     type: i0.Input
                 }], COMMONSERVICE: [{
+                    type: i0.Input
+                }], INPUTVALIDATIONMETHOD: [{
                     type: i0.Input
                 }] } });
 
@@ -1845,9 +2014,9 @@
             tabview.TabViewModule,
             treeselect.TreeSelectModule,
             // HttpClientModule,
-            checkbox.CheckboxModule,
+            i12.CheckboxModule,
             i11.DropdownModule,
-            i10.CardModule,
+            i9.CardModule,
             confirmdialog.ConfirmDialogModule,
             accordion.AccordionModule,
             message.MessageModule,
@@ -1875,11 +2044,11 @@
             password.PasswordModule,
             knob.KnobModule,
             sidebar.SidebarModule,
-            i9.ContextMenuModule,
+            contextmenu.ContextMenuModule,
             confirmpopup.ConfirmPopupModule,
             DirectivesModule,
             AlertModule,
-            i8.TreeModule], exports: [PermissionsComponent] });
+            i10.MatRadioModule], exports: [PermissionsComponent] });
     PicsRbacPermissionsModule.ɵinj = i0__namespace.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsRbacPermissionsModule, imports: [[
                 i14.CommonModule,
                 i2.FormsModule,
@@ -1889,9 +2058,9 @@
                 tabview.TabViewModule,
                 treeselect.TreeSelectModule,
                 // HttpClientModule,
-                checkbox.CheckboxModule,
+                i12.CheckboxModule,
                 i11.DropdownModule,
-                i10.CardModule,
+                i9.CardModule,
                 confirmdialog.ConfirmDialogModule,
                 accordion.AccordionModule,
                 message.MessageModule,
@@ -1919,11 +2088,11 @@
                 password.PasswordModule,
                 knob.KnobModule,
                 sidebar.SidebarModule,
-                i9.ContextMenuModule,
+                contextmenu.ContextMenuModule,
                 confirmpopup.ConfirmPopupModule,
                 DirectivesModule,
                 AlertModule,
-                i8.TreeModule
+                i10.MatRadioModule
             ]] });
     i0__namespace.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "12.2.17", ngImport: i0__namespace, type: PicsRbacPermissionsModule, decorators: [{
                 type: i0.NgModule,
@@ -1940,9 +2109,9 @@
                             tabview.TabViewModule,
                             treeselect.TreeSelectModule,
                             // HttpClientModule,
-                            checkbox.CheckboxModule,
+                            i12.CheckboxModule,
                             i11.DropdownModule,
-                            i10.CardModule,
+                            i9.CardModule,
                             confirmdialog.ConfirmDialogModule,
                             accordion.AccordionModule,
                             message.MessageModule,
@@ -1970,11 +2139,11 @@
                             password.PasswordModule,
                             knob.KnobModule,
                             sidebar.SidebarModule,
-                            i9.ContextMenuModule,
+                            contextmenu.ContextMenuModule,
                             confirmpopup.ConfirmPopupModule,
                             DirectivesModule,
                             AlertModule,
-                            i8.TreeModule
+                            i10.MatRadioModule
                         ],
                         exports: [
                             PermissionsComponent
